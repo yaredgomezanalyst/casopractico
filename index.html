@@ -871,6 +871,164 @@ button.lvl{cursor:pointer;transition:transform .15s ease}button.lvl:hover{transf
   .look{padding:16px}
   .look-t{font-size:1.08rem}
 }
+
+/* ===== Mis proyectos ===== */
+.bg-ink{background:#E9E6DF}
+.prj-facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:15px;margin:-6px 0 16px}
+.prj-facts b{font-family:var(--serif);font-size:1.3rem}
+.prj-rgpd{display:flex;gap:12px;align-items:flex-start;background:var(--bg-2);border-radius:10px;padding:12px 16px;font-size:14px}
+.prj-rgpd p{margin:0}
+.prj-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+@media (max-width:900px){.prj-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.prj-kpis{grid-template-columns:1fr}.pk-v{white-space:nowrap}}
+.pk{border:1px solid var(--line);border-top:5px solid var(--green);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.pk-s{font-size:12.5px;color:var(--ink-3)}
+.pk-v{display:flex;align-items:baseline;gap:8px;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.pk-v span:first-child{color:var(--ink-3);font-size:1.05rem}
+.pk-v b{font-family:var(--serif);font-size:1.9rem;line-height:1}
+.pk-o{font-size:12px;color:#1F6B53;font-weight:700}
+.prj-pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+@media (max-width:900px){.prj-pick{grid-template-columns:1fr}}
+.prj-pick button{display:flex;gap:14px;align-items:flex-start;text-align:left;border:1.5px solid var(--line-2);background:#fff;border-radius:12px;padding:16px 18px;cursor:pointer;font:inherit;color:inherit}
+.prj-pick button:hover{border-color:var(--ink)}
+.prj-pick button[aria-pressed="true"]{border:2px solid var(--ink);background:var(--bg-2)}
+.pp-n{font-family:var(--serif);font-size:2.2rem;font-weight:700;line-height:1}
+.prj-pick button[aria-pressed="true"] .pp-n{color:var(--coral)}
+.prj-pick button{position:relative;overflow:hidden;--pc:var(--ink);border:2px solid var(--pc)!important;background:#fff!important;transition:transform .25s ease,box-shadow .25s ease;flex-direction:column;gap:10px;padding:18px 20px 20px!important}
+.prj-pick .pp-lid{--pc:#E5AE55}.prj-pick .pp-clima{--pc:#4D7DDD}.prj-pick .pp-hotel{--pc:#D97055}
+.prj-pick button .pp-n{color:var(--pt,var(--pc))!important}
+.prj-pick .pp-lid{--pt:#A8741F}.prj-pick .pp-clima{--pt:#3D68C2}.prj-pick .pp-hotel{--pt:#B9533A}
+.prj-pick button:hover,.prj-pick button:focus-visible{transform:translateY(-4px);box-shadow:0 10px 24px -14px var(--pc)}
+.prj-pick button[aria-pressed="true"]{border-width:3px!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--pc) 18%,transparent)}
+.prj-pick button::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--pc);transition:width .35s ease}
+.prj-pick button:hover::after,.prj-pick button[aria-pressed="true"]::after{width:100%}
+.pp-arr{font-style:normal;display:inline-block;transition:transform .25s ease}.prj-pick button:hover .pp-arr{transform:translateX(5px)}
+.pp-art{position:absolute;right:16px;top:12px;width:92px;height:54px}
+.pp-art .pp-axis{stroke:#DDD9CF;stroke-width:1.2}
+.pp-art .pp-bar{fill:var(--pc);transform-box:fill-box;transform-origin:bottom;animation:ppGrow .7s cubic-bezier(.2,.8,.2,1) both}
+.pp-art .pp-rad{fill:color-mix(in srgb,var(--pc) 22%,transparent);stroke:var(--pc);stroke-width:2;stroke-linejoin:round;transform-box:fill-box;transform-origin:center;animation:ppPop .8s cubic-bezier(.2,.8,.2,1) both}
+.pp-art .pp-line{fill:none;stroke:var(--pc);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:220;stroke-dashoffset:220;animation:ppDraw 1s ease forwards}
+.pp-art .pp-dot{fill:var(--pc);opacity:0;animation:ppFade .3s ease forwards}
+.prj-pick button:hover .pp-bar{animation:ppGrow .6s cubic-bezier(.2,.8,.2,1) both}
+.prj-pick button:hover .pp-rad{animation:ppPop .7s cubic-bezier(.2,.8,.2,1) both}
+.prj-pick button:hover .pp-line{animation:ppDraw2 .9s ease forwards}
+@keyframes ppGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes ppPop{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes ppSpin{from{transform:rotate(0)}to{transform:rotate(45deg)}}
+@keyframes ppDraw{to{stroke-dashoffset:0}}
+@keyframes ppDraw2{from{stroke-dashoffset:220}to{stroke-dashoffset:0}}
+@keyframes ppFade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.prj-pick button,.pp-arr{transition:none}.pp-art *{animation:none!important;opacity:1!important;stroke-dashoffset:0!important}}
+.pp-go{margin-top:6px;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.pp-t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.prj-wrap{margin-top:26px;padding-top:22px;border-top:2px solid var(--ink)}
+.prj-title{margin-bottom:4px}
+.lvls{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+@media (max-width:900px){.lvls{grid-template-columns:1fr}}
+.lvls li{background:var(--bg-2);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:4px}
+.clk{display:flex;flex-direction:column;gap:8px}.clk div{border-radius:8px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.stackbar{display:flex;height:34px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}.stackbar i{display:block;height:100%}
+.distl{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.distl li{display:flex;align-items:center;gap:8px}
+.clp{border:1.5px solid var(--line-2);border-radius:12px;padding:16px;background:#fff}
+.clp-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+@media (max-width:620px){.clp-g{grid-template-columns:1fr}}
+.clp-col{border-top:4px solid;padding-top:8px;min-width:0}.clp-col ul{list-style:none;padding:0;margin:6px 0 0;font-size:13.5px}.clp-col li{display:flex;justify-content:space-between;gap:6px;padding:3px 0;border-bottom:1px solid var(--line)}
+.clbar{cursor:pointer}.clbar:hover rect{opacity:.8}.clbar:focus{outline:none}.clbar:focus-visible rect{stroke:#1D1D21;stroke-width:3}
+.cl-rad svg{width:100%;max-width:460px;display:block;margin:0 auto}
+.cl-rleg{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;font-size:12.5px;margin-top:4px}.cl-rleg span{display:inline-flex;align-items:center;gap:6px}
+.cl-rleg .ln{width:22px;height:0;border-top:2.5px solid #1D1D21;display:inline-block}.cl-rleg .ln.ds{border-top:2px dashed #1D1D21}
+.cl-stress{margin:10px 0 0;padding:8px 12px;border-radius:8px;background:#F9E1DC;font-size:14px;text-align:center}
+.cl-how{border:0}.cl-how summary{font-family:var(--serif);font-weight:700;font-size:1.15rem;cursor:pointer;margin-bottom:8px}
+.cl-more{margin-top:12px}.cl-more summary{cursor:pointer;font-weight:600;font-size:14px}
+.cl-rhythm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:720px){.cl-rhythm{grid-template-columns:1fr}}
+.cl-rhythm div{border:1.5px solid var(--line-2);border-top:5px solid var(--blue);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.cl-rhythm div:nth-child(2){border-top-color:var(--yellow)}.cl-rhythm div:nth-child(3){border-top-color:var(--green)}
+.cl-rhythm b{font-family:var(--serif);font-size:1.8rem;line-height:1}
+.cl-qlist{list-style:none;padding:0;margin:12px 0 0;border-top:1px solid var(--line)}
+.cl-qlist li{display:flex;justify-content:space-between;gap:12px;padding:10px 2px;border-bottom:1px solid var(--line);font-size:14.5px}
+@media (max-width:620px){.cl-qlist li{flex-direction:column;gap:6px}}
+.cl-tags{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0;align-items:flex-start}.cl-tags i{font-style:normal;font-size:11.5px;font-weight:600;border:1px solid var(--line-2);border-radius:999px;padding:2px 8px;white-space:nowrap}
+.cl-tags i.an{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cl-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+button.cl-area{text-align:left;background:#fff;cursor:pointer;font:inherit;color:inherit}button.cl-area[aria-pressed="true"]{outline:2px solid var(--ink)}
+.ht-nps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:12px}.ht-nps div{border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:2px;text-align:center}.ht-nps b{font-family:var(--serif);font-size:1.4rem}
+.ht-stack{display:flex;flex-direction:column;gap:8px;margin:8px 0}.ht-row{display:grid;grid-template-columns:34px 1fr 40px;gap:10px;align-items:center}.ht-row .stackbar{height:24px}
+.ht-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:16px}@media (max-width:820px){.ht-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ht-kpis div{border:1.5px solid var(--line-2);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:2px}.ht-kpis b{font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.ht-heat td{text-align:center;font-variant-numeric:tabular-nums;font-weight:600}.ht-heat th[scope=row]{text-align:left}
+.ht-dep{border:0;background:none;padding:2px 0;font:inherit;font-weight:600;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left;color:inherit}.ht-dep[aria-pressed="true"]{font-weight:800;text-decoration-thickness:2px}
+.ht-kv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:8px 0}@media (max-width:520px){.ht-kv{grid-template-columns:repeat(2,minmax(0,1fr))}}.ht-kv div{display:flex;flex-direction:column}.ht-kv b{font-family:var(--serif);font-size:1.3rem}.ht-kv span{font-size:12px;color:var(--muted,#6B6B73)}
+.ht-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ht-stats div{background:var(--bg-2);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:3px}.ht-stats b{font-family:var(--serif);font-size:1.4rem}
+.prj-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-top:26px}
+@media (max-width:980px){.prj-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:520px){.prj-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.prj-steps button{border:1.5px solid var(--line-2);background:#fff;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px;text-align:left;cursor:pointer;font-size:14px;font-weight:600;min-height:52px}
+.prj-steps button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ps-n{width:26px;height:26px;border-radius:50%;background:var(--bg-2);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;flex:none}
+.prj-panel{border:2px solid var(--ink);border-radius:12px;padding:24px;margin-top:12px;animation:rise .25s ease}
+.prj-nav{display:flex;justify-content:space-between;gap:10px;margin-top:12px;flex-wrap:wrap}
+.prj-src{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+@media (max-width:820px){.prj-src{grid-template-columns:1fr}}
+.psrc{border:1px solid var(--line);border-top:5px solid;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.psrc span{font-size:14px;color:var(--ink-2)}
+.prj-ul{margin:0;padding-left:18px;font-size:14.5px}.prj-ul li{margin-bottom:6px}
+.prj-hero{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;background:var(--coral-t);border-radius:12px;padding:20px}
+@media (max-width:820px){.prj-hero{grid-template-columns:1fr}}
+.prj-big{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prj-big div{background:#fff;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:4px}
+.prj-big b{font-family:var(--serif);font-size:2.1rem;line-height:1}
+.prj-big span{font-size:12.5px;color:var(--ink-2)}
+.prj-chart{border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:18px;background:#fff}
+.prj-chart svg{width:100%;height:auto;display:block}
+.prj-ch-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.seg{display:inline-flex;border:1.5px solid var(--ink);border-radius:999px;overflow:hidden;flex-wrap:wrap}
+.seg button{border:0;background:#fff;padding:7px 14px;font-size:13.5px;font-weight:600;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.pt:focus circle{stroke-width:3}
+.prj-num{font-family:var(--serif);font-weight:700;font-size:3rem;line-height:1;margin:10px 0 8px}
+table.heat{border-collapse:separate;border-spacing:3px;width:100%;font-size:13.5px;min-width:620px}
+table.heat th{text-align:left;font-size:12.5px;color:var(--ink-2);font-weight:600;padding:6px}
+table.heat td{text-align:center;border-radius:5px;padding:8px 4px;font-weight:600;font-variant-numeric:tabular-nums}
+table.heat td:last-child{text-align:left;background:none;font-weight:400}
+.phab{border:1px solid var(--line);border-top:5px solid;border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.niv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.niv{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.niv{grid-template-columns:1fr}}
+.nv{border:1px solid var(--line);border-left:6px solid;border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.ptl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.ptl{grid-template-columns:1fr}}
+.ptl li{border-top:4px solid var(--ink);padding-top:10px;display:flex;flex-direction:column;gap:4px}
+.ptl-w{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+.watch{border:2px solid;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.watch p{margin:0}
+.flowp{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:820px){.flowp{grid-template-columns:1fr}}
+.flowp li{background:var(--bg-2);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:4px}
+.fp-n{width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700}
+pre.code{background:#1D1D21;color:#F5F4F1;border-radius:10px;padding:14px 16px;font-size:12.5px;overflow-x:auto;margin:0;line-height:1.5}
+.prj-link{margin-top:28px;border-top:2px solid var(--ink);padding-top:18px}
+.prj-link ul{margin:10px 0 0;padding-left:18px;font-size:15px}
+.prj-home{display:flex;align-items:center;gap:16px;margin-top:20px;border:2px solid var(--ink);border-radius:12px;padding:16px 20px;text-decoration:none;color:inherit}
+.prj-home:hover{background:var(--bg-2)}
+.prj-home>span:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1}
+.prj-home b{font-family:var(--serif);font-size:1.25rem}
+.prj-home .arr{font-family:var(--serif);font-size:22px}
+@media (max-width:700px){.prj-panel{padding:16px}.prj-big b{font-size:1.7rem}.prj-num{font-size:2.4rem}}
+@media (max-width:1460px){.brand small{display:none}}
+.nav a{padding:8px 9px}
+
+.rep-box{margin-top:22px;border:2px solid var(--green);border-radius:12px;padding:20px;background:#fff}
+.rep-h{display:flex;gap:12px;align-items:center}
+.rep-calc{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.rep-calc>div{background:var(--bg-2);border-radius:10px;padding:12px 16px;display:flex;flex-direction:column;gap:2px;min-width:0;flex:1 1 150px}
+.rep-calc b{font-family:var(--serif);font-size:1.9rem;line-height:1.1}
+.rep-calc span{font-size:13px;color:var(--ink-2)}
+.rep-calc .rep-op{background:none;flex:0 0 auto;font-family:var(--serif);font-size:2rem;justify-content:center;padding:0 2px}
+.rep-calc .rep-res{background:var(--green-t)}
+.rep-sub{font-family:var(--sans);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
+@media (max-width:560px){.rep-calc .rep-op{flex-basis:100%;text-align:center;font-size:1.4rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -888,6 +1046,7 @@ button.lvl{cursor:pointer;transition:transform .15s ease}button.lvl:hover{transf
       <a href="#datos" data-nav="datos">Datos y fases</a>
       <a href="#lideres" data-nav="lideres">Panel del líder</a>
       <a href="#riesgos" data-nav="riesgos">Riesgos</a>
+      <a href="#proyectos" data-nav="proyectos">Mis proyectos</a>
       <button class="linkbtn nav-reset" type="button" data-action="reset">Restablecer demo</button>
     </nav>
     <span class="badge" title="Todo lo que ves está simulado"><span class="b-long">Demo interactiva · Datos ficticios</span><span class="b-short">Demo · Datos ficticios</span></span>
@@ -1266,12 +1425,13 @@ function lineChart(series,opt){
 
 /* ================= Plantillas comunes ================= */
 var ICON={
+ chart:'<svg class="qc-icon" viewBox="0 0 44 44" fill="none" stroke="#1D1D21" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 36h28"/><path d="M12 30l7-9 6 5 9-12"/><circle cx="34" cy="14" r="2"/></svg>',
  measure:'<svg class="qc-icon" viewBox="0 0 44 44" fill="none" stroke="#1D1D21" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="19" cy="19" r="10"/><path d="M26.5 26.5L36 36"/><path d="M14 19h10M19 14v10"/></svg>',
  data:'<svg class="qc-icon" viewBox="0 0 44 44" fill="none" stroke="#1D1D21" stroke-width="2" stroke-linecap="round" aria-hidden="true"><ellipse cx="22" cy="11" rx="12" ry="5"/><path d="M10 11v11c0 2.8 5.4 5 12 5s12-2.2 12-5V11"/><path d="M10 22v11c0 2.8 5.4 5 12 5s12-2.2 12-5V22"/></svg>',
  talk:'<svg class="qc-icon" viewBox="0 0 44 44" fill="none" stroke="#1D1D21" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M7 9h30v19H20l-8 7v-7H7z"/><path d="M14 17h16M14 22h10" stroke-linecap="round"/></svg>',
  shield:'<svg class="qc-icon" viewBox="0 0 44 44" fill="none" stroke="#1D1D21" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M22 6l13 5v10c0 9-6 15-13 17C15 36 9 30 9 21V11z"/><path d="M16 22l4 4 8-9" stroke-linecap="round"/></svg>'
 };
-var BIGICON={yellow:'measure',blue:'data',green:'talk',coral:'shield'};
+var BIGICON={yellow:'measure',blue:'data',green:'talk',coral:'shield',ink:'chart'};
 function sectionHead(n,color,eyebrow,title,lead){
   return '<div class="shead bg-'+color+'"><div><p class="shead-eb">'+(n?'Pregunta '+n+' del caso · ':'')+esc(eyebrow)+'</p><h1 tabindex="-1" data-focus>'+title+'</h1>'+(lead?'<p class="shead-lead">'+lead+'</p>':'')+'</div><div class="shead-ico" aria-hidden="true">'+ICON[BIGICON[color]]+'</div></div>';
 }
@@ -1322,7 +1482,8 @@ function vHome(){
    qcard(3,'green','Panel del líder','Dónde mirar, la tendencia y una conversación sugerida.','lideres',ICON.talk)+
    qcard(4,'coral','Riesgos','Tres sesgos que cuidamos y cómo los vigilamos.','riesgos',ICON.shield)+
   '</div>'+
-  '<p class="xs muted" style="margin-top:24px">Todo es simulado: tres equipos ficticios, personas identificadas como «Empleado 1, 2…» y respuestas generadas para ilustrar la propuesta. No reproduce la estructura ni datos de BeWay.</p>'+
+  '<a class="prj-home" href="#proyectos">'+iico('chart','var(--bg-2)')+'<span><span class="cta-eb">Mis proyectos</span><b>Tres trabajos de analítica de personas</b><span class="small muted">Liderazgo y calidad del trabajo · Clima laboral multinivel · eNPS y experiencia del huésped.</span></span><span class="arr" aria-hidden="true">→</span></a>'+
+  '<p class="xs muted" style="margin-top:24px">La demo es simulada: tres equipos ficticios, personas identificadas como «Empleado 1, 2…» y respuestas generadas para ilustrar la propuesta. No reproduce la estructura ni datos de BeWay.</p>'+
   '</div></section>';
 }
 function qcard(n,color,title,text,route,icon){
@@ -1923,6 +2084,422 @@ function monitorPart(k){
     (vr.some(function(x){return x.a&&x.b&&x.b<x.a*.6;})?'<p class="note coral small" style="margin-top:8px">Hay una caída fuerte de variabilidad en algún centro: conviene explorar, sin concluir.</p>':'<p class="small muted" style="margin-top:8px">Sin caídas bruscas de variabilidad.</p>')+'</div></div>';
 }
 
+var PRJ={"C":["Organización","Feedback","Apoyo","Claridad","Escucha"],"teams":[{"eq":"EQ01","dep":"Recolección Norte","tam":14,"nivel":"Referente","foco":"—","lid":[4.09,3.97],"des":[3.88,3.73],"rep":[5.5,5.4],"d0":[0,0,7,0,0],"d1":[0,0,0,0,0],"cf":-0.12,"lect":"Sin cambio","part":[14,13]},{"eq":"EQ02","dep":"Recolección Sur","tam":12,"nivel":"Intensiva","foco":"Organización","lid":[2.67,2.91],"des":[3.29,3.5],"rep":[9.1,7.6],"d0":[58,50,50,33,33],"d1":[18,27,45,18,18],"cf":0.67,"lect":"Mejora clara","part":[12,11]},{"eq":"EQ03","dep":"Envasado L1","tam":11,"nivel":"Moderada","foco":"Feedback","lid":[3.38,3.64],"des":[3.82,3.98],"rep":[5.3,5.1],"d0":[0,27,0,9,0],"d1":[9,9,9,18,9],"cf":0.36,"lect":"Mejora leve","part":[11,11]},{"eq":"EQ04","dep":"Envasado L2","tam":10,"nivel":"Intensiva","foco":"Feedback y Organización","lid":[2.46,3.18],"des":[3.27,3.65],"rep":[10.2,7.9],"d0":[70,90,30,20,30],"d1":[20,20,0,20,20],"cf":0.95,"lect":"Mejora clara","part":[10,10]},{"eq":"EQ05","dep":"Calibrado","tam":10,"nivel":"Moderada","foco":"Feedback","lid":[3.32,3.2],"des":[3.8,3.83],"rep":[7.6,6.5],"d0":[30,40,10,0,0],"d1":[0,56,0,11,0],"cf":-0.23,"lect":"Empeora","part":[10,9]},{"eq":"EQ06","dep":"Almacén","tam":9,"nivel":"Seguimiento","foco":"Organización","lid":[3.93,4.07],"des":[3.67,3.58],"rep":[6.7,6.4],"d0":[11,0,0,0,11],"d1":[11,11,0,0,11],"cf":0.11,"lect":"Sin cambio","part":[9,9]},{"eq":"EQ07","dep":"Calidad","tam":9,"nivel":"Referente","foco":"—","lid":[4.24,4.0],"des":[3.67,3.72],"rep":[4.7,4.8],"d0":[0,0,0,0,0],"d1":[0,11,0,0,11],"cf":-0.24,"lect":"Empeora","part":[9,9]},{"eq":"EQ08","dep":"Riego","tam":9,"nivel":"Intensiva","foco":"Organización","lid":[2.84,3.16],"des":[3.11,3.19],"rep":[8.7,8.5],"d0":[67,11,33,22,0],"d1":[22,11,0,22,22],"cf":0.22,"lect":"Mejora leve","part":[9,9]},{"eq":"EQ09","dep":"Mantenimiento","tam":8,"nivel":"Moderada","foco":"Feedback","lid":[3.42,3.4],"des":[3.69,3.81],"rep":[7.7,7.0],"d0":[12,25,12,0,0],"d1":[0,12,0,12,0],"cf":0.12,"lect":"Sin cambio","part":[8,8]},{"eq":"EQ10","dep":"Logística","tam":8,"nivel":"Intensiva","foco":"Organización","lid":[2.52,3.1],"des":[2.91,3.19],"rep":[9.4,8.3],"d0":[62,50,50,38,12],"d1":[12,25,12,0,38],"cf":1.0,"lect":"Mejora clara","part":[8,8]}],"cg":{"T0":[[3.13,30],[3.14,29],[3.28,19],[3.51,12],[3.49,9]],"T1":[[3.45,9],[3.39,18],[3.53,7],[3.49,10],[3.52,12]]},"alpha":{"T0":{"lid":0.8849,"des":0.8211},"T1":{"lid":0.8587,"des":0.772}},"icc":{"T0":{"lid1":0.5621,"lid2":0.9275,"des1":0.188,"des2":0.6976,"rl":0.9096,"rd":0.9241},"T1":{"lid1":0.2877,"lid2":0.7962,"des1":0.0514,"des2":0.3506,"rl":0.9185,"rd":0.8882}},"sp":{"lid_des":{"rho":0.6626,"p":0.0368,"lo":0.0375,"hi":0.9236,"n":10},"lid_rep":{"rho":-0.903,"p":0.0003,"lo":-1.0,"hi":-0.4717,"n":10},"des_rep":{"rho":-0.7295,"p":0.0166,"lo":-0.9608,"hi":-0.1682,"n":10}},"cond_rep":{"Organización":{"rho":-0.9515,"p":0.0,"lo":-1.0,"hi":-0.68,"n":10},"Feedback":{"rho":-0.7697,"p":0.0092,"lo":-1.0,"hi":-0.1111,"n":10},"Apoyo":{"rho":-0.8788,"p":0.0008,"lo":-1.0,"hi":-0.475,"n":10},"Claridad":{"rho":-0.7927,"p":0.0062,"lo":-0.9806,"hi":-0.3503,"n":10},"Escucha":{"rho":-0.9152,"p":0.0002,"lo":-1.0,"hi":-0.5597,"n":10}},"emp":{"T0":{"lid":3.31,"des":3.5325,"rep":0.0721,"unid":138924,"repu":10015},"T1":{"lid":3.4763,"des":3.6325,"rep":0.0648,"unid":138884,"repu":8999}},"halves":{"top_rep":0.0548,"bot_rep":0.0909,"top_rep_mean":0.0599,"bot_rep_mean":0.0903,"top_des":3.7428,"bot_des":3.2768},"wt":{"Organización (media)":{"n":10,"m0":3.1066,"m1":3.436,"cambio":0.3294,"lo":0.1105,"hi":0.5703,"mejoran":8,"p":0.0191,"r":0.7414},"Feedback (media)":{"n":10,"m0":3.126,"m1":3.3765,"cambio":0.2505,"lo":0.0276,"hi":0.4813,"mejoran":8,"p":0.0831,"r":0.548},"Organización (% desfavorable)":{"n":10,"m0":0.3111,"m1":0.0931,"cambio":-0.218,"lo":-0.3596,"hi":-0.0789,"mejoran":6,"p":0.0346,"r":-0.6682},"Feedback (% desfavorable)":{"n":10,"m0":0.2934,"m1":0.1828,"cambio":-0.1106,"lo":-0.273,"hi":0.0217,"mejoran":5,"p":0.141,"r":-0.4655},"Liderazgo (media)":{"n":10,"m0":3.2886,"m1":3.4617,"cambio":0.173,"lo":0.0022,"hi":0.3647,"mejoran":6,"p":0.1263,"r":0.4835},"Desempeño (media)":{"n":10,"m0":3.5098,"m1":3.6184,"cambio":0.1086,"lo":0.0163,"hi":0.1982,"mejoran":8,"p":0.0665,"r":0.5802},"% reproceso":{"n":10,"m0":0.0751,"m1":0.0676,"cambio":-0.0075,"lo":-0.0123,"hi":-0.0033,"mejoran":9,"p":0.0108,"r":-0.8058}},"wtr":{"n":100,"m0":3.5325,"m1":3.6325,"cambio":0.1,"lo":0.04,"hi":0.1625,"mejoran":33,"p":0.0047,"r":0.2824},"grp":{"Organización (media)":{"mi":0.7833,"mr":0.0667,"p":0.019},"Feedback (media)":{"mi":0.5347,"mr":0.094,"p":0.019},"Liderazgo (media)":{"mi":0.4431,"mr":-0.0707,"p":0.019},"Desempeño (media)":{"mi":0.2448,"mr":0.0403,"p":0.0381},"% reproceso":{"mi":-0.0133,"mr":-0.0025,"p":0.0667}},"spc":{"rho":-0.697,"p":0.0251,"n":10},"gm":{"Intensiva":{"org":0.6972,"fb":0.5988,"des":0.237,"rep0":0.0942,"rep1":0.0789},"Moderada":{"org":0.1703,"fb":0.0851,"des":0.103,"rep0":0.0616,"rep1":0.0566},"Seg":{"org":-0.0018,"fb":-0.0484,"des":-0.0569,"rep0":0.0553,"rep1":0.0546}}};
+/* ---------- Mis proyectos ---------- */
+var NIVCOL={Intensiva:'#D97055',Moderada:'#E5AE55',Seguimiento:'#6E95E4',Referente:'#56A58F'};
+var PSTEP=[['pregunta','La pregunta y el método'],['diag','Qué encontramos'],['plan','Qué hicimos'],['res','Resultados'],['rigor','Rigor y límites'],['como','Cómo lo trabajé']];
+function f1(x){return (Math.round(x*10)/10).toFixed(1).replace('.',',');}
+function f2(x){return (Math.round(x*100)/100).toFixed(2).replace('.',',');}
+function fp(p){return p<0.001?'< 0,001':String((Math.round(p*1000)/1000).toFixed(3)).replace('.',',');}
+function sg(x,d){var s=(d===1?f1(Math.abs(x)):f2(Math.abs(x)));if(/^0,0+$/.test(s))return '0,00'.slice(0,s.length);return (x>0?'+':x<0?'−':'')+s;}
+var LOFF={rep:{EQ05:13,EQ09:-9,EQ10:-6,EQ02:6},des:{EQ05:-9,EQ03:9,EQ06:-6,EQ07:8}};
+function prjScatter(ykey){
+  var W=600,H=380,L=66,R=20,T=18,B=46,T_=PRJ.teams;
+  var xmin=2.3,xmax=4.4,ymin=ykey==='rep'?4:2.8,ymax=ykey==='rep'?11:4.0;
+  function X(v){return L+(v-xmin)/(xmax-xmin)*(W-L-R);}function Y(v){return T+(1-(v-ymin)/(ymax-ymin))*(H-T-B);}
+  var xs=T_.map(function(t){return t.lid[0];}),ys=T_.map(function(t){return ykey==='rep'?t.rep[0]:t.des[0];});
+  var mx=mean(xs),my=mean(ys),b=0,d=0;xs.forEach(function(x,i){b+=(x-mx)*(ys[i]-my);d+=(x-mx)*(x-mx);});b=b/d;var a=my-b*mx;
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Diagrama de dispersión: liderazgo percibido frente a '+(ykey==='rep'?'porcentaje de reproceso':'desempeño evaluado')+' por equipo, diez equipos">';
+  (ykey==='rep'?[4,6,8,10]:[3,3.5,4]).forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="#EEECE6"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+(ykey==='rep'?v+' %':f1(v))+'</text>';});
+  [2.5,3,3.5,4].forEach(function(v){s+='<text x="'+X(v)+'" y="'+(H-B+18)+'" text-anchor="middle" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+f1(v)+'</text>';});
+  s+='<text x="'+((L+W-R)/2)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" fill="#45454C" font-family="system-ui,sans-serif">Liderazgo percibido por el equipo (1–5) →</text>';
+  s+='<text transform="translate(14,'+((T+H-B)/2)+') rotate(-90)" text-anchor="middle" font-size="12" fill="#45454C" font-family="system-ui,sans-serif">'+(ykey==='rep'?'% de trabajo que hubo que repetir o corregir →':'Desempeño evaluado por el responsable (1–5) →')+'</text>';
+  s+='<line x1="'+X(2.4)+'" y1="'+Y(a+b*2.4)+'" x2="'+X(4.3)+'" y2="'+Y(a+b*4.3)+'" stroke="#A09C92" stroke-dasharray="5 4"/>';
+  T_.forEach(function(t,i){var cx=X(xs[i]),cy=Y(ys[i]),rr=5+t.tam*0.45;s+='<g tabindex="0" class="pt"><title>'+t.eq+' · '+t.dep+': liderazgo '+f2(xs[i])+', '+(ykey==='rep'?'reproceso '+f1(ys[i])+' %':'desempeño '+f2(ys[i]))+' · '+t.tam+' personas</title><circle cx="'+cx+'" cy="'+cy+'" r="'+rr+'" fill="'+NIVCOL[t.nivel]+'" fill-opacity=".85" stroke="#1D1D21" stroke-width="1"/><text x="'+(cx+rr+4)+'" y="'+(cy+4+(LOFF[ykey][t.eq]||0))+'" font-size="11.5" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+t.eq+'</text></g>';});
+  return s+'</svg>';
+}
+function prjDumbbell(rows,opt){
+  // rows:[{lab,a,b,sub}] escala 0..max
+  var W=600,L=opt.L||150,R=118,RH=36,H=rows.length*RH+30,max=opt.max;
+  function X(v){return L+v/max*(W-L-R);}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(opt.label)+'">';
+  (opt.ticks||[]).forEach(function(v){s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="4" y2="'+(H-22)+'" stroke="#EEECE6"/><text x="'+X(v)+'" y="'+(H-6)+'" text-anchor="middle" font-size="10.5" fill="#6B6B73" font-family="system-ui,sans-serif">'+v+(opt.suf||'')+'</text>';});
+  rows.forEach(function(r,i){var y=14+i*RH;var good=opt.lowerBetter?r.b<r.a:r.b>r.a;var cB=r.c||(good?'#2F8A6E':'#C83E2A');
+    s+='<text x="0" y="'+(y+4)+'" font-size="12.5" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+esc(r.lab)+'</text>'+(r.sub?'<text x="0" y="'+(y+17)+'" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+esc(r.sub)+'</text>':'');
+    s+='<line x1="'+X(r.a)+'" x2="'+X(r.b)+'" y1="'+y+'" y2="'+y+'" stroke="#CFCBC1" stroke-width="3"/>';
+    s+='<circle cx="'+X(r.a)+'" cy="'+y+'" r="6" fill="#A09C92"/><circle cx="'+X(r.b)+'" cy="'+y+'" r="7" fill="'+cB+'" stroke="#fff" stroke-width="1.5"/>';
+    var right=Math.max(X(r.a),X(r.b));s+='<text x="'+(right+12)+'" y="'+(y+4)+'" font-size="12.5" fill="#1D1D21" font-family="system-ui,sans-serif">'+(opt.fmt?opt.fmt(r.a):r.a)+' → <tspan font-weight="700">'+(opt.fmt?opt.fmt(r.b):r.b)+'</tspan></text>';});
+  return s+'</svg>';
+}
+function heatCell(v){var a=Math.min(1,v/80);var bg=v===0?'#F3F8F6':'rgba(217,112,85,'+(0.12+a*0.88).toFixed(2)+')';var fg=v>=50?'#fff':'#1D1D21';return '<td style="background:'+bg+';color:'+fg+'">'+v+' %</td>';}
+function ppArt(k){
+  var s='<svg class="pp-art" viewBox="0 0 120 70" aria-hidden="true" focusable="false">';
+  if(k==='lid'){[[10,44],[30,34],[50,38],[70,22],[90,14]].forEach(function(p,i){s+='<rect class="pp-bar" style="animation-delay:'+(i*.09)+'s" x="'+(p[0]+2)+'" y="'+p[1]+'" width="14" height="'+(64-p[1])+'" rx="2"/>';});s+='<line x1="4" x2="116" y1="64" y2="64" class="pp-axis"/>';}
+  else if(k==='clima'){var n=8,cx=60,cy=36,pts=[];for(var i=0;i<n;i++){var a=-Math.PI/2+i*2*Math.PI/n,r=[26,20,24,14,22,18,26,16][i];pts.push((cx+Math.cos(a)*r).toFixed(1)+','+(cy+Math.sin(a)*r).toFixed(1));}
+    s+='<circle cx="60" cy="36" r="28" class="pp-axis" fill="none"/><circle cx="60" cy="36" r="16" class="pp-axis" fill="none"/><polygon class="pp-rad" points="'+pts.join(' ')+'"/>';}
+  else{s+='<line x1="4" x2="116" y1="40" y2="40" class="pp-axis"/><polyline class="pp-line" points="6,24 34,20 62,52 90,26 114,22"/>'+[[6,24],[34,20],[62,52],[90,26],[114,22]].map(function(p,i){return '<circle class="pp-dot" style="animation-delay:'+(0.5+i*.08)+'s" cx="'+p[0]+'" cy="'+p[1]+'" r="3.5"/>';}).join('');}
+  return s+'</svg>';
+}
+function vProyectos(){
+  var u=S.ui,st=u.prjStep||'pregunta',cur=u.prj||null;
+  var h='<section class="view"><div class="wrap">'+sectionHead(0,'ink','Mis proyectos · experiencias reales anonimizadas','Tres proyectos de analítica de personas','Trabajos reales, con los datos agregados y sin documentos originales.');
+  h+='<div class="prj-pick" role="group" aria-label="Elegir proyecto">'+[['lid','01','Liderazgo y calidad del trabajo','Empresa agraria · 100 personas · 2025','Diagnóstico, programa de 8 semanas y evaluación antes y después.'],['clima','02','Clima laboral multinivel','Entidad agroalimentaria · 12 sedes · 2023 · Blipol','13 factores, gráficos de araña y lectura por sede, área y departamento.'],['hotel','03','eNPS y experiencia del huésped','Hotel 4* en Roquetas de Mar · 180 empleados · 2025','Compromiso de cada departamento frente a la valoración de sus huéspedes.']].map(function(x){return '<button type="button" id="pp-'+x[0]+'" class="pp-'+x[0]+'" data-action="prj-pick" data-id="'+x[0]+'" aria-expanded="'+(cur===x[0])+'" aria-pressed="'+(cur===x[0])+'"><span class="pp-n">'+x[1]+'</span><span class="pp-t"><b>'+x[2]+'</b><span class="small">'+x[3]+'</span><span class="xs muted">'+x[4]+'</span><span class="pp-go">'+(cur===x[0]?'Cerrar ×':'Ver proyecto <i class="pp-arr">→</i>')+'</span></span>'+ppArt(x[0])+'</button>';}).join('')+'</div>';
+  if(!cur)return h+'<p class="small muted" style="margin-top:14px">Elige un proyecto para ver el diagnóstico, los análisis y los resultados.</p></div></section>';
+  if(cur==='hotel')return h+'<div class="prj-wrap"><h2 class="title-m prj-title">eNPS de empleados y valoración de huéspedes en un hotel de 4* en Roquetas de Mar</h2>'+prjHotel()+'</div></div></section>';
+  if(cur==='clima')return h+'<div class="prj-wrap"><h2 class="title-m prj-title">Clima laboral multinivel en una entidad agroalimentaria</h2>'+prjClima()+'</div></div></section>';
+  h+='<div class="prj-wrap"><h2 class="title-m prj-title">Liderazgo y calidad del trabajo en una empresa agraria de Almería</h2>';
+  h+='<div class="prj-facts"><span><b>100</b> trabajadores</span><span><b>10</b> equipos</span><span><b>10</b> responsables</span><span><b>3</b> fuentes de datos</span><span><b>100 %</b> → <b>97 %</b> participación</span></div>';
+  h+='<div class="prj-rgpd">'+iico('lock','#fff','sm')+'<p><b>Proyecto real, anonimizado.</b> Empresa, equipos y responsables aparecen con códigos (EQ01–EQ10). Por la RGPD no se comparten documentos originales ni datos individuales: aquí solo hay resultados agregados por equipo y por empresa, y la descripción del trabajo realizado.</p></div>';
+  // KPIs
+  var e=PRJ.emp;
+  h+='<div class="prj-kpis">'+[
+    ['Organización','respuestas desfavorables',PRJ.cg.T0[0][1]+' %',PRJ.cg.T1[0][1]+' %','Objetivo: < 20 %'],
+    ['Feedback','respuestas desfavorables',PRJ.cg.T0[1][1]+' %',PRJ.cg.T1[1][1]+' %','Objetivo: < 20 %'],
+    ['Reproceso','de la empresa',f1(100*e.T0.rep)+' %',f1(100*e.T1.rep)+' %','Objetivo: a la baja'],
+    ['Desempeño','medio (1–5)',f2(e.T0.des),f2(e.T1.des),'Objetivo: al alza']].map(function(k){return '<div class="pk"><span class="cta-eb">'+k[0]+'</span><span class="pk-s">'+k[1]+'</span><div class="pk-v"><span>'+k[2]+'</span><span class="arr">→</span><b>'+k[3]+'</b></div><span class="pk-o">'+k[4]+' · cumplido</span></div>';}).join('')+'</div>';
+  // Pasos
+  h+='<div class="prj-steps" role="group" aria-label="Fases del proyecto">'+PSTEP.map(function(p,i){return '<button type="button" id="ps-'+p[0]+'" aria-pressed="'+(st===p[0])+'" aria-controls="prjPanel" data-action="prj-step" data-id="'+p[0]+'"><span class="ps-n">'+(i+1)+'</span><span>'+p[1]+'</span></button>';}).join('')+'</div>';
+  h+='<div class="prj-panel" id="prjPanel" aria-live="polite">'+prjPanel(st)+'</div>';
+  var ix=PSTEP.map(function(p){return p[0];}).indexOf(st);
+  h+='<div class="prj-nav">'+(ix>0?'<button type="button" class="btn sm" data-action="prj-step" data-id="'+PSTEP[ix-1][0]+'"><span class="arr">←</span> '+PSTEP[ix-1][1]+'</button>':'<span></span>')+(ix<PSTEP.length-1?'<button type="button" class="btn primary sm" data-action="prj-step" data-id="'+PSTEP[ix+1][0]+'">'+PSTEP[ix+1][1]+' <span class="arr">→</span></button>':'')+'</div>';
+  return h+'</div></div></section>';
+}
+/* ---------- Proyecto 2: clima multinivel ---------- */
+var CL={
+ fac:[['Relaciones con el jefe',8.6,'c'],['Sentido de pertenencia',7.8,'c'],['Relaciones con el equipo',7.5,'c'],['Estabilidad',7.4,'c'],['Condiciones físicas',7.0,'c'],['Flexibilidad horaria',6.9,'p'],['Capacitación',6.8,'p'],['Motivación',6.7,'p'],['Comunicación',6.3,'p'],['Progresión interna',5.9,'k'],['Reconocimiento',5.7,'k'],['Recompensa',4.7,'k'],['Estrés',7.4,'k',1]],
+ dist:[['Excelente','9–10',3,'#2F8A6E'],['Bueno','7–8,9',33,'#8CC4AE'],['Justo','6–6,9',33,'#E5AE55'],['Pobre','1–5,9',31,'#D97055']],
+ sedes:[['Murcia',4.9],['Granada',5.0],['Albacete',6.1],['Alicante',6.1],['Huelva',6.2],['Tenerife',6.4],['Almería',6.4],['Ciudad Real',6.8],['Sevilla',7.0],['Valencia',7.5],['Mérida',7.8],['Almería-Los Vélez',8.2]],
+ deps:[['Insumos',4.0],['Calidad',5.2],['BRCGS-IFS',5.7],['Producción Integrada',6.0],['Ecológico',6.2],['Administración',6.2],['Informática',6.4],['GLOBALG.A.P.',6.6],['Inspección',6.6],['Dirección',7.4],['Sistemas',7.4],['Ensayos',8.1]],
+ prof:{
+  'Murcia':{isg:4.9,c:[['Capacitación',7.5]],p:[['Condiciones físicas',6],['Progresión interna',6.3],['Pertenencia',6]],k:[['Estrés',10],['Recompensa',2],['Comunicación',5.3],['Motivación',5.3],['Estabilidad',4.3],['Flexibilidad horaria',4.5]],t:['Sobrecarga de trabajo sin una estructura para resolverla.','Incertidumbre e incumplimiento de condiciones laborales.','Jornadas largas que restan flexibilidad.','Falta de formación comercial y de gestión de equipos.']},
+  'Granada':{isg:5.0,c:[['Relaciones con el equipo',7.1]],p:[['Estabilidad',6.1]],k:[['Relaciones con el jefe',3.4],['Progresión interna',3.2],['Reconocimiento',3],['Recompensa',2.2],['Flexibilidad horaria',4.1],['Condiciones físicas',4.2],['Estrés',7.3]],t:['Falta de cursos especializados; formación fuera de horario.','Información que llega tarde, sobre todo las instrucciones de trabajo.','Falta de vehículos y tecnología obsoleta.','Pocas oportunidades de ascenso y salarios estancados.']},
+  'BRCGS-IFS':{isg:5.7,sat:0,c:[['Estabilidad',7.4],['Relaciones con el equipo',6.2]],p:[['Progresión interna',6.8],['Pertenencia',6.6],['Capacitación',6.2],['Motivación',6]],k:[['Recompensa',3.5],['Reconocimiento',4.7],['Flexibilidad horaria',5.3],['Beneficios sociales',5.5],['Comunicación',5.6],['Relaciones con el jefe',5.7],['Estrés',7.4]],t:['Sensación de poco reconocimiento frente al sector y a la responsabilidad del puesto.','Falta de transparencia salarial entre departamentos.','Poca coordinación entre departamentos: auditorías al mismo cliente sin que los equipos lo sepan.']},
+  'Área técnica':{isg:6.4,sat:40,c:[['Relaciones con el equipo',7.5],['Pertenencia',7.7],['Estabilidad',7.4],['Capacitación',7.1],['Relaciones con el jefe',7],['Condiciones físicas',7]],p:[['Motivación',6.9],['Flexibilidad horaria',6.7],['Comunicación',6.4],['Progresión interna',6.3]],k:[['Estrés',7.6],['Reconocimiento',5.8],['Recompensa',4.6]],t:[]},
+  'Área administrativa':{isg:6.2,sat:21,c:[['Relaciones con el jefe',8.3],['Relaciones con el equipo',7.8],['Pertenencia',7.8],['Flexibilidad horaria',7.3],['Estabilidad',7]],p:[['Condiciones físicas',6.9],['Estrés',6.8],['Motivación',6.4],['Capacitación',6.3],['Comunicación',6.1]],k:[['Reconocimiento',5.4],['Progresión interna',5.1],['Recompensa',4.7]],t:[]},
+  'Sistemas':{isg:7.4,sat:100,c:[['Relaciones con el jefe',10],['Capacitación',8.8],['Pertenencia',8.8],['Estabilidad',8.7],['Condiciones físicas',8.5],['Flexibilidad horaria',8.5],['Motivación',8.3],['Progresión interna',7.3],['Relaciones con el equipo',7.4]],p:[['Estrés',6.8],['Reconocimiento',6]],k:[['Comunicación',5],['Recompensa',5.3]],t:['Mejorar la conexión cuando se trabaja en las instalaciones de clientes.','Más información sobre objetivos y propósito de la empresa.']}
+ },
+ areas:[{n:'Área técnica',isg:6.4,sat:40,c:'Relaciones con el equipo (7,5), pertenencia (7,7), estabilidad (7,4), capacitación (7,1)',k:'Estrés (7,6), recompensa (4,6), reconocimiento (5,8)'},{n:'Área administrativa',isg:6.2,sat:21,c:'Relaciones con el jefe (8,3), relaciones con el equipo (7,8), pertenencia (7,8), flexibilidad (7,3)',k:'Recompensa (4,7), progresión interna (5,1), reconocimiento (5,4)'}],
+ voz:{
+  'Capacitación':[['Apertura de la empresa a ofrecer y bonificar formación.','Comunicación fluida entre departamentos para organizarla.'],['Se pide más formación continua y especializada (técnica, Excel, contabilidad).','Se espera que la iniciativa venga de la empresa.','Se percibe más oferta para roles técnicos que administrativos.']],
+  'Comunicación':[['Buena comunicación dentro de cada delegación.','Procedimientos accesibles por correo.'],['Poca comunicación entre departamentos.','Temas importantes que la dirección no comunica a todos.','Desconocimiento de la visión y los objetivos.','Noticias que llegan por rumores.']],
+  'Estrés':[['Algunas personas se sienten valoradas al asumir tareas extra.','Disposición a esforzarse en temporada alta.'],['Carga de trabajo muy alta y horas extra no compensadas.','Funciones poco definidas.','Carga desigual entre compañeros.']],
+  'Reconocimiento':[['Apoyo del propio equipo.','En algunas delegaciones se valoran las aportaciones en las reuniones.'],['La gerencia no reconoce el esfuerzo extra.','Reconocimiento selectivo.','Sensación de que las quejas no tienen respuesta.']],
+  'Recompensa':[['Se valoran beneficios no monetarios.','Existen incentivos, aunque su adecuación se percibe de forma desigual.'],['Reparto poco equitativo y sin criterios claros.','Salarios por debajo del mercado.','Sin estructura de progresión salarial.']],
+  'Progresión interna':[['Hay quien ve oportunidades para personas comprometidas.','Satisfacción con el puesto actual.'],['Ascensos sin subida salarial acorde.','Falta de transparencia salarial.','Oportunidades distintas según la delegación.','No hay un plan de promoción estructurado.']],
+  'Motivación':[['Buena coordinación en las delegaciones.','Las opiniones se valoran en las reuniones.'],['Carga alta y plazos estrictos.','Jornadas largas.','Ideas que no se llevan a cabo por falta de recursos.']],
+  'Condiciones físicas':[['Soporte informático rápido y eficaz.'],['Falta de luz natural y ventilación.','Equipos informáticos antiguos.','Varias bases de datos que duplican el trabajo.']]
+ }
+};
+var CLQ={"Beneficios sociales": [["¿Los beneficios sociales ofrecidos por la empresa son suficientes y adecuados?", 190, 1, 0], ["¿Cómo de buenos han sido los beneficios sociales que has utilizado?", 190, 1, 0]], "Capacitación": [["¿La empresa te ofrece suficientes opciones de formación?", 190, 0, 0], ["¿Estás satisfecho/a con la formación recibida en la empresa para tu puesto de trabajo?", 190, 0, 0], ["¿La empresa facilita la formación tanto como deseas? Escribe en la casilla de abajo, si pudieras elegir, ¿en qué te formarías?", 190, 0, 0], ["¿Cuánta facilidad tienes para pedir y que te den formación cuando la necesitas tanto interna como externamente?", 190, 0, 0]], "Comunicación": [["¿Dirías que hay una buena comunicación a todos los niveles en la empresa?", 190, 1, 0], ["¿Hay una comunicación adecuada entre los departamentos?", 190, 0, 0], ["¿Existe suficiente información acerca de cambios en procedimientos, nuevas implantaciones e instrucciones de trabajo?", 190, 0, 0], ["¿Te consideras adecuadamente informado/a de los objetivos y metas de la empresa?", 190, 0, 0], ["¿La dirección mantiene comunicación formal con el equipo informando de los temas relevantes de la empresa?", 190, 0, 0]], "Condiciones físicas": [["¿Las condiciones físicas de la empresa son las adecuadas?", 190, 1, 0], ["¿Cuentas con los equipos y herramientas necesarios para hacer tu trabajo de forma correcta?", 190, 0, 0], ["¿Tienes a tu alcance la tecnología adecuada para desarrollar correctamente tu trabajo?", 190, 0, 0], ["Si pides algún medio de trabajo extra, ¿la empresa te lo suele facilitar?", 190, 0, 0]], "Estrés": [["Valora el nivel de estrés de estas últimas semanas en tu puesto de trabajo", 25, 0, 0], ["Señala el nivel de estrés actual en tu puesto de trabajo", 190, 0, 0], ["¿Tienes más trabajo del que puedes hacerte cargo?", 190, 0, 0]], "Flexibilidad horaria": [["¿Tu trabajo te permite conciliar la vida laboral y personal tanto como deseas?", 190, 0, 0], ["¿Tienes facilidad para elegir las vacaciones?", 190, 0, 0], ["¿Puedes adaptar tu horario de trabajo si lo necesitas para atender temas personales/familiares?", 190, 0, 0], ["¿Crees que tu horario y calendario es equiparable al de empresas similares?", 190, 0, 0]], "Estabilidad": [["¿Existe un clima de estabilidad y certidumbre en la empresa?", 190, 0, 0], ["¿Tu trayectoria en la empresa es todo lo estable y consolidada que deseas?", 190, 0, 0], ["¿Crees que tu empresa es sólida?", 190, 0, 0]], "Pertenencia": [["¿Te sientes identificado/a con la cultura, valores y responsabilidad social de la empresa?", 190, 1, 0], ["¿Recomendarías la empresa a un amigo?", 190, 0, 0], ["¿Te sientes orgulloso/a del producto/servicio que presta la empresa?", 190, 0, 0]], "Motivación": [["¿Qué tal ha ido la semana?", 7, 0, 0], ["¿Te está gustando en lo que estás trabajando estas últimas semanas?", 25, 0, 0], ["En general, ¿te motivan las responsabilidades que requiere tu puesto de trabajo?", 190, 0, 0], ["Valora cómo de contento/a estás con tu trabajo diario", 190, 0, 0], ["En términos generales, ¿te estimulan tus tareas cotidianas?", 190, 0, 0], ["¿Tu trabajo es motivante y te realizas desarrollándolo?", 190, 0, 0]], "Progresión interna": [["¿Tu trayectoria en la empresa está siendo la adecuada?", 190, 1, 0], ["¿Hay suficientes opciones y posibilidades de promocionar en la empresa?", 190, 0, 0], ["¿Estás contento/a con tu progresión en la empresa?", 190, 0, 0]], "Recompensa": [["¿Es tu retribución proporcional al trabajo realizado en la empresa?", 190, 0, 0], ["¿Crees que la empresa premia o reconoce económicamente de manera adecuada a sus trabajadores en relación a sus resultados?", 190, 0, 0], ["¿Consideras que tu salario es equiparable al de otras personas que realizan tareas similares a las tuyas en otras empresas?", 190, 0, 0]], "Reconocimiento": [["Por lo general, ¿tu trabajo tiene el reconocimiento que merece?", 190, 0, 0], ["¿Recibes reconocimiento, por parte de tus responsables, cuando haces un buen trabajo?", 25, 0, 0], ["¿Se reconocen y se valoran tus esfuerzos y aportaciones a la empresa?", 190, 0, 0], ["En el trabajo, ¿tus opiniones cuentan?", 190, 0, 0], ["¿Se valora positivamente que los empleados aporten nuevas ideas y sugerencias?", 190, 0, 0]], "Relaciones con el equipo": [["¿Tienes buenos compañeros, en términos generales?", 25, 0, 1], ["Por lo general, ¿estás contento/a con las personas que forman tu departamento?", 25, 0, 1], ["¿Qué tal te llevas con tus compañeros últimamente, en términos generales?", 25, 0, 1], ["¿Qué nivel de compañerismo dirías que existe en tu equipo?", 190, 0, 1], ["¿Hay compañerismo en general?", 190, 0, 1], ["En términos generales, ¿crees que hay buena relación entre departamentos?", 190, 0, 1]], "Relaciones con el jefe": [["Valora a tu responsable directo en términos generales", 190, 0, 1], ["¿Tu responsable directo es un/a buen/a líder?", 190, 0, 1], ["¿Tu responsable directo se esfuerza en conseguir un buen ambiente laboral?", 190, 0, 1]]};
+var CLK={c:['#2F8A6E','#E3F2EC','Consolidado'],p:['#E2862A','#FCEBD9','Oportunidad'],k:['#C83E2A','#F9E1DC','Atención']};
+var RAX=[['Relaciones con el jefe','Jefe'],['Relaciones con el equipo','Equipo'],['Pertenencia','Pertenencia'],['Estabilidad','Estabilidad'],['Condiciones físicas','Cond. físicas'],['Flexibilidad horaria','Flexibilidad'],['Capacitación','Capacitación'],['Motivación','Motivación'],['Comunicación','Comunicación'],['Progresión interna','Progresión'],['Reconocimiento','Reconoc.'],['Recompensa','Recompensa']];
+var CLEMP={'Relaciones con el jefe':8.6,'Relaciones con el equipo':7.5,'Pertenencia':7.8,'Estabilidad':7.4,'Condiciones físicas':7.0,'Flexibilidad horaria':6.9,'Capacitación':6.8,'Motivación':6.7,'Comunicación':6.3,'Progresión interna':5.9,'Reconocimiento':5.7,'Recompensa':4.7,'Estrés':7.4};
+function clVals(name){if(name==='Empresa')return CLEMP;var p=CL.prof[name],o={};if(!p)return o;['c','p','k'].forEach(function(k){p[k].forEach(function(x){o[x[0]]=x[1];});});return o;}
+function clBand(v){return v>=7?'#2F8A6E':v>=6?'#E2862A':'#C83E2A';}
+function clRadar(name,opt){
+  opt=opt||{};var v=clVals(name),ref=opt.noref?null:CLEMP,W=540,H=400,cx=W/2,cy=H/2+4,R=140,n=RAX.length;
+  function P(i,val){var a=-Math.PI/2+i*2*Math.PI/n;return [cx+Math.cos(a)*R*val/10,cy+Math.sin(a)*R*val/10];}
+  function ring(val){return RAX.map(function(_,i){return P(i,val).join(',');}).join(' ');}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" class="clradar" role="img" aria-label="Radar de '+esc(name)+': '+RAX.map(function(a){return a[0]+' '+(v[a[0]]!=null?f1(v[a[0]]):'sin dato');}).join(', ')+'">';
+  s+='<polygon points="'+ring(10)+'" fill="#E3F2EC"/><polygon points="'+ring(7)+'" fill="#FCEBD9"/><polygon points="'+ring(6)+'" fill="#F9E1DC"/>';
+  [2,4,6,7,8,10].forEach(function(r){s+='<polygon points="'+ring(r)+'" fill="none" stroke="'+(r===6||r===7?'#B9B5AA':'#DDD9CF')+'" stroke-width="'+(r===6||r===7?1.2:.8)+'"/>';});
+  RAX.forEach(function(a,i){var e=P(i,10),l=P(i,11.9),miss=v[a[0]]==null;s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+e[0]+'" y2="'+e[1]+'" stroke="#DDD9CF"/>';
+    s+='<text x="'+l[0]+'" y="'+(l[1]+4)+'" text-anchor="'+(Math.abs(l[0]-cx)<8?'middle':l[0]<cx?'end':'start')+'" font-size="14" font-weight="600" fill="'+(miss?'#9A9AA2':'#1D1D21')+'" font-family="system-ui,sans-serif">'+a[1]+(miss?' · s/d':'')+'</text>';});
+  [6,7].forEach(function(r){var p=P(0,r);s+='<text x="'+(p[0]+4)+'" y="'+(p[1]+11)+'" font-size="9.5" fill="#6B6B73" font-family="system-ui,sans-serif">'+r+'</text>';});
+  if(ref&&name!=='Empresa')s+='<polygon points="'+RAX.map(function(a,i){return P(i,ref[a[0]]).join(',');}).join(' ')+'" fill="none" stroke="#1D1D21" stroke-width="1.6" stroke-dasharray="5 4"/>';
+  var full=RAX.every(function(a){return v[a[0]]!=null;});
+  if(full)s+='<polygon points="'+RAX.map(function(a,i){return P(i,v[a[0]]).join(',');}).join(' ')+'" fill="rgba(29,29,33,.10)" stroke="#1D1D21" stroke-width="2.4" stroke-linejoin="round"/>';
+  else RAX.forEach(function(a,i){var b=RAX[(i+1)%n];if(v[a[0]]==null||v[b[0]]==null)return;var p1=P(i,v[a[0]]),p2=P((i+1)%n,v[b[0]]);s+='<line x1="'+p1[0]+'" y1="'+p1[1]+'" x2="'+p2[0]+'" y2="'+p2[1]+'" stroke="#1D1D21" stroke-width="2.4" stroke-linecap="round"/>';});
+  RAX.forEach(function(a,i){var x=v[a[0]];if(x==null)return;var p=P(i,x);s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="5" fill="'+clBand(x)+'" stroke="#fff" stroke-width="1.5"><title>'+a[0]+': '+f1(x)+'</title></circle>';});
+  s+='</svg>';
+  var st=v['Estrés'];
+  s+='<div class="cl-rleg"><span><i class="ln"></i>'+esc(name)+'</span>'+(name!=='Empresa'?'<span><i class="ln ds"></i>Media de la empresa</span>':'')+'<span><i class="lg-dot" style="background:#C83E2A"></i>&lt; 6</span><span><i class="lg-dot" style="background:#E2862A"></i>6–6,9</span><span><i class="lg-dot" style="background:#2F8A6E"></i>≥ 7</span></div>';
+  if(st!=null)s+='<p class="cl-stress"><b>Estrés '+f1(st)+'</b> <span class="small">(empresa 7,4). Va fuera del radar porque su escala es inversa: más alto es peor.</span></p>';
+  return '<div class="cl-rad">'+s+'</div>';
+}
+function clHowRead(){return '<details class="cl-how" open><summary>Cómo se lee este gráfico de araña</summary><ol class="prj-ul"><li><b>Cada radio es un factor de clima</b>, de 0 en el centro a 10 en el borde. Cuanto más lejos del centro, mejor valorado.</li><li><b>Los anillos de color</b> siguen los tramos del ISG: rojo por debajo de 6, naranja de 6 a 6,9 y verde desde 7.</li><li><b>La línea discontinua</b> es la media de la empresa. Donde la forma negra queda por dentro, esa unidad está peor que la media.</li><li><b>Una forma «mordida»</b> señala dónde mirar primero. Una forma amplia y redonda indica un clima equilibrado.</li><li><b>El estrés va aparte</b> porque se puntúa al revés. Y el área de la forma no es un índice: cada factor se lee por separado.</li></ol></details>';}
+function clBars(rows,opt){
+  var W=600,L=opt.L||170,R=44,RH=opt.rh||28,H=rows.length*RH+26;function X(v){return L+v/10*(W-L-R);}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(opt.label)+'">';
+  [0,2.5,5,7.5,10].forEach(function(v){s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="2" y2="'+(H-20)+'" stroke="#EEECE6"/><text x="'+X(v)+'" y="'+(H-5)+'" text-anchor="middle" font-size="10.5" fill="#6B6B73" font-family="system-ui,sans-serif">'+String(v).replace('.',',')+'</text>';});
+  if(opt.ref!=null)s+='<line x1="'+X(opt.ref)+'" x2="'+X(opt.ref)+'" y1="2" y2="'+(H-20)+'" stroke="#1D1D21" stroke-dasharray="4 3"/><text x="'+(X(opt.ref)+4)+'" y="12" font-size="10.5" fill="#1D1D21" font-family="system-ui,sans-serif">Empresa '+f1(opt.ref)+'</text>';
+  rows.forEach(function(r,i){var y=6+i*RH;var c=r.c||'#8A8A92';var sel=opt.sel===r.n;
+    s+='<g'+(r.click?' class="clbar" tabindex="0" role="button" data-action="'+r.click+'" data-id="'+esc(r.n)+'" aria-label="'+esc(r.n)+': '+f1(r.v)+'. Ver detalle"':'')+'><text x="'+(L-8)+'" y="'+(y+RH/2+1)+'" text-anchor="end" font-size="12.5" font-weight="'+(sel?800:600)+'" fill="#1D1D21" font-family="system-ui,sans-serif">'+esc(r.n)+(r.inv?' *':'')+'</text>';
+    s+='<rect x="'+L+'" y="'+(y+4)+'" width="'+(X(r.v)-L)+'" height="'+(RH-10)+'" rx="3" fill="'+c+'"'+(sel?' stroke="#1D1D21" stroke-width="2"':'')+'/><text x="'+(X(r.v)+6)+'" y="'+(y+RH/2+1)+'" font-size="12" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+f1(r.v)+'</text></g>';});
+  return s+'</svg>';
+}
+function clProfile(name){
+  var p=CL.prof[name];if(!p)return '';
+  function col(k,arr){var c=CLK[k];arr=arr.filter(function(x){return x[0]!=='Estrés';});return '<div class="clp-col" style="border-top-color:'+c[0]+'"><span class="cta-eb" style="color:'+c[0]+'">'+c[2]+'</span><ul>'+(arr.length?arr.map(function(x){return '<li>'+x[0]+' <b>'+f1(x[1])+'</b></li>';}).join(''):'<li class="muted">—</li>')+'</ul></div>';}
+  return '<div class="clp"><div class="clp-h"><div><span class="cta-eb">Perfil de '+esc(name)+'</span><h4 class="title-s" style="margin-top:4px">ISG '+f1(p.isg)+(p.sat!=null?' · '+p.sat+' % satisfechos':'')+'</h4></div></div>'+clRadar(name)+
+   '<details class="cl-more"><summary>Ver los factores en tabla</summary><div class="clp-g">'+col('c',p.c)+col('p',p.p)+col('k',p.k)+'</div></details>'+
+   (p.t.length?'<h5 class="rep-sub" style="margin-top:12px">Lo que contaron las personas (resumido)</h5><ul class="prj-ul">'+p.t.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>':'')+'</div>';
+}
+var CSTEP=[['enfoque','Blipol y el método'],['empresa','La empresa'],['sedes','Por sede'],['deps','Áreas y departamentos'],['voz','Lo que dicen las personas'],['reco','Conclusiones']];
+function prjClima(){
+  var u=S.ui,st=u.clStep||'enfoque';
+  var h='<div class="prj-facts"><span><b>6,4</b> ISG sobre 10</span><span><b>13</b> factores de clima</span><span><b>54</b> preguntas en el banco</span><span><b>12</b> sedes</span><span><b>12</b> departamentos</span></div>';
+  h+='<div class="prj-rgpd">'+iico('lock','#fff','sm')+'<p><b>Proyecto real, anonimizado.</b> No se muestra el nombre de la empresa. Se ven sedes y departamentos, pero no resultados por cargo, porque muchos cargos los ocupa una sola persona. Los comentarios están resumidos, no citados literalmente.</p></div>';
+  h+='<div class="prj-steps" role="group" aria-label="Partes del informe">'+CSTEP.map(function(p,i){return '<button type="button" id="cs-'+p[0]+'" aria-pressed="'+(st===p[0])+'" aria-controls="clPanel" data-action="cl-step" data-id="'+p[0]+'"><span class="ps-n">'+(i+1)+'</span><span>'+p[1]+'</span></button>';}).join('')+'</div>';
+  h+='<div class="prj-panel" id="clPanel" aria-live="polite">'+clPanel(st)+'</div>';
+  var ix=CSTEP.map(function(p){return p[0];}).indexOf(st);
+  h+='<div class="prj-nav">'+(ix>0?'<button type="button" class="btn sm" data-action="cl-step" data-id="'+CSTEP[ix-1][0]+'"><span class="arr">←</span> '+CSTEP[ix-1][1]+'</button>':'<span></span>')+(ix<CSTEP.length-1?'<button type="button" class="btn primary sm" data-action="cl-step" data-id="'+CSTEP[ix+1][0]+'">'+CSTEP[ix+1][1]+' <span class="arr">→</span></button>':'')+'</div>';
+  return h;
+}
+function lapseTxt(d){return d<=7?'Cada semana':d<=25?'Cada ~25 días':'Cada ~6 meses';}
+function clPanel(st){
+  var u=S.ui;
+  if(st==='enfoque'){
+    var qk=Object.keys(CLQ),qs=u.clQ||'Reconocimiento',ql=CLQ[qs]||[];
+    return '<div class="prj-hero" style="background:var(--blue-t,#E6EEFB)"><div><span class="cta-eb">La herramienta</span><h2 class="title-m" style="margin-top:6px">Hecho con Blipol, nuestra herramienta de People Analytics de experiencia de empleado</h2><p style="margin-top:8px">Blipol es la herramienta que comercializamos para escuchar a la plantilla de forma continua. Con ella se recogieron las respuestas y se construyó este diagnóstico de 2023.</p></div><div class="prj-big"><div><b>54</b><span>preguntas en el banco, en 14 factores</span></div><div><b>0–10</b><span>escala de respuesta</span></div></div></div>'+
+     '<h3 class="title-s" style="margin:4px 0 6px">Cómo pregunta Blipol</h3><p class="small muted" style="margin-bottom:12px">Las preguntas no llegan todas juntas: cada una tiene su propio ritmo. Las de ánimo del momento se repiten a menudo; las de fondo, unas dos veces al año.</p>'+
+     '<div class="cl-rhythm">'+[['Cada semana','1','Ánimo del momento: «¿Qué tal ha ido la semana?»'],['Cada ~25 días','6','Experiencia reciente: estrés de las últimas semanas, reconocimiento del responsable, relación con los compañeros'],['Cada ~6 meses','47','Percepción de fondo: formación, comunicación, recompensa, estabilidad, pertenencia…']].map(function(x,i){return '<div><span class="cta-eb">'+x[0]+'</span><b>'+x[1]+'</b><span class="small">'+x[2]+'</span></div>';}).join('')+'</div>'+
+     '<h3 class="title-s" style="margin:22px 0 10px">Explora el banco de preguntas</h3><div class="seg" role="group" aria-label="Elegir factor del banco de preguntas">'+qk.map(function(k){return '<button type="button" data-action="cl-q" data-id="'+k+'" aria-pressed="'+(qs===k)+'">'+k+' <span class="muted">'+CLQ[k].length+'</span></button>';}).join('')+'</div>'+
+     '<ul class="cl-qlist">'+ql.map(function(q){return '<li><span>'+esc(q[0])+'</span><span class="cl-tags"><i>'+lapseTxt(q[1])+'</i>'+(q[2]?'<i>Con opciones a marcar</i>':'')+(q[3]?'<i class="an">Anónima</i>':'')+'</span></li>';}).join('')+'</ul>'+
+     '<p class="xs muted" style="margin-top:6px">Las preguntas sobre el responsable directo y sobre el equipo se configuran como anónimas. Blipol incluye además un módulo de onboarding para nuevas incorporaciones.</p>'+
+     '<h3 class="title-s" style="margin:26px 0 12px">Cómo se hace el análisis</h3><ol class="flowp cl-flow" style="margin-top:0">'+[
+       ['Recogida continua','Blipol lanza preguntas cortas de 0 a 10, con comentario opcional, según el ritmo de cada una.'],
+       ['Puntuación por factor','Las respuestas de cada factor se resumen en una puntuación de 0 a 10. Junto a ellas, el índice de satisfacción general (ISG).'],
+       ['Cruce con la estructura','Cada resultado se lee por empresa, sede, área, departamento y cargo, con los datos de organización de la plantilla.'],
+       ['Clasificación','Cada factor se sitúa como consolidado (7 o más), oportunidad (6 a 6,9) o atención (menos de 6). En estrés, al revés.'],
+       ['Análisis de comentarios','Los textos se agrupan por factor y se separa lo que se valora de lo que preocupa.'],
+       ['Conclusiones por nivel','Se priorizan unidades y factores y se proponen acciones concretas para cada nivel.']].map(function(x,i){return '<li><span class="fp-n">'+(i+1)+'</span><b>'+x[0]+'</b><span class="small">'+x[1]+'</span></li>';}).join('')+'</ol>'+
+     '<h3 class="title-s" style="margin:24px 0 10px">Cinco niveles de lectura</h3><ol class="lvls">'+[['Empresa','Visión general para decisiones estratégicas'],['Sede','Cómo funciona cada ubicación'],['Área','Técnica frente a administrativa'],['Departamento','Mejoras funcionales concretas'],['Cargo','Solo en el informe interno']].map(function(x,i){return '<li><span class="fp-n">'+(i+1)+'</span><b>'+x[0]+'</b><span class="small">'+x[1]+'</span></li>';}).join('')+'</ol>';
+  }
+  if(st==='empresa'){
+    var rows=CL.fac.map(function(f){return {n:f[0],v:f[1],c:CLK[f[2]][0],inv:f[3]};});
+    return '<div class="prj-hero" style="background:var(--yellow-t)"><div><span class="cta-eb">Resultado general</span><h2 class="title-m" style="margin-top:6px">Un clima «justo»: buenas relaciones, pero recompensa, reconocimiento y estrés pesan</h2></div><div class="prj-big"><div><b>6,4</b><span>ISG de la empresa, sobre 10</span></div><div><b>64 %</b><span>poco satisfechos o insatisfechos</span></div></div></div>'+
+     '<div class="grid g2" style="align-items:start"><div class="prj-chart"><h3 class="title-s">El perfil de clima de la empresa</h3><p class="xs muted" style="margin:4px 0 8px">12 factores en un gráfico de araña. El estrés, aparte.</p>'+clRadar('Empresa')+'</div><div class="prj-chart">'+clHowRead()+
+     '<p class="small" style="margin-top:14px">Aquí la forma se estira hacia el jefe, la pertenencia y el equipo, y se hunde hacia la recompensa, el reconocimiento y la progresión: el lado izquierdo de la araña es el que pide atención.</p></div></div>'+
+     '<div class="grid g2" style="align-items:start"><div class="prj-chart"><h3 class="title-s">Los 13 factores, en barras</h3><p class="xs muted" style="margin:4px 0 8px">Color según la lectura del informe. * Estrés: más alto = más estrés.</p>'+clBars(rows,{label:'Puntuación de los 13 factores de clima, de 0 a 10',L:180,rh:26})+
+     '<div class="legend" style="justify-content:flex-start">'+['c','p','k'].map(function(k){return '<span><i class="lg-dot" style="background:'+CLK[k][0]+'"></i>'+CLK[k][2]+'</span>';}).join('')+'</div></div>'+
+     '<div class="prj-chart"><h3 class="title-s">Cómo se reparte el ISG</h3><p class="xs muted" style="margin:4px 0 12px">% de personas en cada nivel del índice.</p><div class="stackbar">'+CL.dist.map(function(d){return '<i style="width:'+d[2]+'%;background:'+d[3]+'" title="'+d[0]+' '+d[2]+' %"></i>';}).join('')+'</div><ul class="distl">'+CL.dist.map(function(d){return '<li><i class="lg-dot" style="background:'+d[3]+'"></i><b>'+d[2]+' %</b> '+d[0]+' <span class="muted small">('+d[1]+' puntos)</span></li>';}).join('')+'</ul>'+
+     '<p class="small" style="margin-top:14px">Las relaciones interpersonales y la pertenencia sostienen el clima. La recompensa (4,7), el reconocimiento (5,7) y la progresión interna (5,9) son lo más débil, y el estrés (7,4) aparece unido a ellos en los comentarios.</p></div></div>';
+  }
+  if(st==='sedes'){
+    var sel=CL.prof[u.clSede]?u.clSede:'Granada';
+    var rows=CL.sedes.map(function(x){return {n:x[0],v:x[1],c:x[1]<5.5?'#C83E2A':x[1]>=7.7?'#2F8A6E':'#9DB7D9',click:CL.prof[x[0]]?'cl-sede':null};});
+    return '<h2 class="title-m">Murcia y Granada concentran la baja satisfacción</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">De 4,9 a 8,2 entre sedes: la media de la empresa esconde realidades muy distintas.</p>'+
+     '<div class="grid g2" style="align-items:start"><div class="prj-chart"><h3 class="title-s">ISG por sede</h3><p class="xs muted" style="margin:4px 0 8px">Pulsa Murcia o Granada para ver su gráfico de araña frente a la empresa.</p>'+clBars(rows,{label:'ISG por sede, de 0 a 10',L:130,ref:6.4,sel:sel,rh:27})+
+     '<p class="note small" style="margin-top:14px"><b>Cómo leer la comparación.</b> Granada queda por dentro de la línea discontinua en casi todos los factores, y se hunde en el jefe (3,4 frente a 8,6). En Murcia faltan tres factores en el informe («s/d»): la línea se corta ahí en vez de rellenarlos con cero. Destacan el estrés máximo (10) y la recompensa (2).</p></div>'+
+     '<div><div class="seg" role="group" aria-label="Elegir sede" style="margin-bottom:10px">'+['Murcia','Granada'].map(function(n){return '<button type="button" data-action="cl-sede" data-id="'+n+'" aria-pressed="'+(sel===n)+'">'+n+'</button>';}).join('')+'</div>'+clProfile(sel)+'</div></div>'+
+     '<p class="note small" style="margin-top:16px">El informe propuso un diagnóstico más profundo en las sedes con baja satisfacción antes de actuar: los números dicen dónde mirar, no qué está pasando.</p>';
+  }
+  if(st==='deps'){
+    var opts=['Área técnica','Área administrativa','BRCGS-IFS','Sistemas'],sel=opts.indexOf(u.clDep)>=0?u.clDep:'BRCGS-IFS';
+    var rows=CL.deps.map(function(x){return {n:x[0],v:x[1],c:x[1]<6?'#C83E2A':x[1]>=7.4?'#2F8A6E':'#9DB7D9',click:CL.prof[x[0]]?'cl-dep':null};});
+    return '<h2 class="title-m">Áreas y departamentos</h2>'+
+     '<div class="grid g2" style="margin-top:12px">'+CL.areas.map(function(a){return '<button type="button" class="nv cl-area" data-action="cl-dep" data-id="'+a.n+'" aria-pressed="'+(sel===a.n)+'" style="border-left-color:'+(a.isg<6.3?'#E2862A':'#56A58F')+'"><b>'+a.n+' · ISG '+f1(a.isg)+'</b><span class="small"><b>'+a.sat+' %</b> satisfechos o muy satisfechos</span><span class="small"><b>Fortalezas:</b> '+a.c+'.</span><span class="small"><b>Prioridades:</b> '+a.k+'.</span><span class="xs" style="text-decoration:underline">Ver su gráfico de araña</span></button>';}).join('')+'</div>'+
+     '<div class="grid g2" style="align-items:start;margin-top:4px"><div class="prj-chart"><h3 class="title-s">ISG por departamento</h3><p class="xs muted" style="margin:4px 0 8px">Pulsa BRCGS-IFS o Sistemas para comparar un departamento con baja y otro con alta satisfacción.</p>'+clBars(rows,{label:'ISG por departamento, de 0 a 10',L:150,ref:6.4,sel:sel,rh:27})+
+     '<p class="note small" style="margin-top:14px"><b>Dos formas opuestas.</b> Sistemas desborda la media en casi todo (jefe 10, capacitación 8,8) pero se hunde en comunicación y recompensa. BRCGS-IFS queda por dentro casi entera: ninguna persona de ese departamento se declaró satisfecha.</p></div>'+
+     '<div><div class="seg" role="group" aria-label="Elegir área o departamento" style="margin-bottom:10px">'+opts.map(function(n){return '<button type="button" data-action="cl-dep" data-id="'+n+'" aria-pressed="'+(sel===n)+'">'+n+'</button>';}).join('')+'</div>'+clProfile(sel)+'</div></div>'+
+     '<p class="note small" style="margin-top:16px"><b>Por cargo.</b> El informe interno también analizó los cargos y encontró la satisfacción más baja en responsables de área y mandos intermedios. Aquí no se publican sus resultados: muchos cargos los ocupa una sola persona y sus datos serían identificables.</p>';
+  }
+  if(st==='voz'){
+    var keys=Object.keys(CL.voz),sel=u.clVoz||'Comunicación',v=CL.voz[sel];
+    return '<h2 class="title-m">Lo que dicen las personas</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Los comentarios abiertos se analizaron por factor, separando lo que se valora de lo que preocupa. Así los números tienen contexto.</p>'+
+     '<div class="seg" role="group" aria-label="Elegir factor" style="margin-top:14px">'+keys.map(function(k){return '<button type="button" data-action="cl-voz" data-id="'+k+'" aria-pressed="'+(sel===k)+'">'+k+'</button>';}).join('')+'</div>'+
+     '<div class="grid g2" style="margin-top:14px;align-items:start"><div class="watch" style="border-color:var(--green)"><span class="cta-eb">Se valora</span><ul class="prj-ul">'+v[0].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div><div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Preocupa</span><ul class="prj-ul">'+v[1].map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div></div>'+
+     '<p class="xs muted" style="margin-top:10px">Temas resumidos a partir de los comentarios. No se reproducen citas literales.</p>';
+  }
+  return '<h2 class="title-m">Conclusiones y recomendaciones</h2>'+
+   '<div class="grid g2" style="margin-top:14px;align-items:start"><div class="watch" style="border-color:var(--green)"><span class="cta-eb">Lo que sostiene el clima</span><p class="small">Las relaciones con el jefe y con el equipo y el sentido de pertenencia: un ambiente de trabajo colaborativo.</p></div><div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Dónde actuar</span><p class="small">Recompensa, reconocimiento y progresión interna, con el estrés ligado a ellos. Empezar por las sedes A y B y por Insumos, Calidad y BRCGS-IFS.</p></div></div>'+
+   '<h3 class="title-s" style="margin:22px 0 12px">Seis recomendaciones</h3><ol class="flowp" style="margin-top:0">'+[['Recompensa y reconocimiento','Un sistema más transparente y equitativo, con incentivos también no monetarios.'],['Desarrollo profesional','Un plan de carrera claro y comunicado que permita progresar.'],['Formación para mandos intermedios','Liderazgo y gestión para responsables con baja satisfacción, por su efecto en sus equipos.'],['Causas del estrés','Analizarlas y actuar sobre las cargas de trabajo o con programas de bienestar.'],['Sedes con baja satisfacción','Un diagnóstico más profundo de los problemas propios de cada sede.'],['Necesidades de formación','Un análisis de brechas por rol y por organización.']].map(function(x,i){return '<li><span class="fp-n">'+(i+1)+'</span><b>'+x[0]+'</b><span class="small">'+x[1]+'</span></li>';}).join('')+'</ol>';
+}
+/* ---------- Proyecto 3: eNPS y huéspedes ---------- */
+var HT=[{"n": "Spa", "c": "D", "pl": 8, "e": [28.6, 28.6, 33.3, 28.6], "v": [8.58, 8.47, 8.26, 8.58], "ne": [7, 7, 6, 7], "nh": [89, 174, 210, 121], "det": [14, 17]}, {"n": "Recepción", "c": "D", "pl": 18, "e": [31.2, 33.3, 20.0, 29.4], "v": [8.75, 8.67, 8.31, 8.62], "ne": [16, 15, 15, 17], "nh": [410, 660, 880, 470], "det": [15, 20]}, {"n": "Animación", "c": "D", "pl": 10, "e": [11.1, 25.0, 28.6, 12.5], "v": [7.55, 8.26, 8.34, 7.62], "ne": [9, 8, 7, 8], "nh": [176, 355, 548, 200], "det": [20, 14]}, {"n": "Bar y piscina", "c": "D", "pl": 16, "e": [0.0, 14.3, 9.1, 7.1], "v": [7.69, 8.13, 7.93, 7.73], "ne": [13, 14, 11, 14], "nh": [239, 478, 651, 281], "det": [27, 27]}, {"n": "Restaurante (sala)", "c": "D", "pl": 28, "e": [12.5, 8.7, -20.0, 8.3], "v": [8.04, 8.01, 7.4, 8.09], "ne": [24, 23, 20, 24], "nh": [410, 660, 880, 470], "det": [25, 40]}, {"n": "Pisos", "c": "I", "pl": 46, "e": [11.9, 5.9, -29.4, 4.8], "v": [8.55, 8.29, 7.62, 8.5], "ne": [42, 34, 34, 42], "nh": [410, 660, 880, 470], "det": [26, 44]}, {"n": "Mantenimiento", "c": "I", "pl": 12, "e": [0.0, 0.0, -22.2, 0.0], "v": [7.66, 7.65, 7.29, 7.64], "ne": [10, 10, 9, 10], "nh": [410, 660, 880, 470], "det": [30, 44]}, {"n": "Cocina", "c": "I", "pl": 26, "e": [0.0, -4.55, -20.0, 0.0], "v": [7.83, 7.78, 7.53, 7.89], "ne": [23, 22, 20, 22], "nh": [410, 660, 880, 470], "det": [31, 40]}];
+var HQ={e:[11.5,10.3,-8.2,9.5],n:[43.9,45.6,27.4,41.1],v:[8.08,8.10,7.78,8.08],pro:[36,34,26,35],det:[24,24,34,26],resp:[157,145,134,158]};
+function sgn(v){var x=Math.abs(v),f=Math.floor(x),r=(x-f===0.5)?(f%2?f+1:f):Math.round(x);return (r===0?'':v>0?'+':'−')+r;}
+function htMean(a){return a.reduce(function(s,x){return s+x;},0)/a.length;}
+var HSTEP=[['pregunta','La pregunta'],['anio','El año'],['mapa','Departamento × trimestre'],['rel','¿Están relacionados?'],['verano','Foco verano'],['reco','Qué proponemos']];
+function prjHotel(){
+  var u=S.ui,st=u.htStep||'pregunta';
+  var h='<div class="prj-facts"><span><b>180</b> empleados</span><span><b>8</b> departamentos</span><span><b>594</b> respuestas eNPS</span><span><b>2.420</b> encuestas de huéspedes</span><span><b>4</b> trimestres de 2025</span></div>';
+  h+='<div class="prj-rgpd">'+iico('lock','#fff','sm')+'<p><b>Proyecto real, anonimizado.</b> No se muestra el nombre del hotel. Solo hay resultados agregados por departamento y trimestre; no se comparten respuestas individuales ni documentos originales. En equipos pequeños los datos se leen con cautela.</p></div>';
+  h+='<div class="prj-steps" role="group" aria-label="Partes del caso">'+HSTEP.map(function(p,i){return '<button type="button" id="hs-'+p[0]+'" aria-pressed="'+(st===p[0])+'" aria-controls="htPanel" data-action="ht-step" data-id="'+p[0]+'"><span class="ps-n">'+(i+1)+'</span><span>'+p[1]+'</span></button>';}).join('')+'</div>';
+  h+='<div class="prj-panel" id="htPanel" aria-live="polite">'+htPanel(st)+'</div>';
+  var ix=HSTEP.map(function(p){return p[0];}).indexOf(st);
+  h+='<div class="prj-nav">'+(ix>0?'<button type="button" class="btn sm" data-action="ht-step" data-id="'+HSTEP[ix-1][0]+'"><span class="arr">←</span> '+HSTEP[ix-1][1]+'</button>':'<span></span>')+(ix<HSTEP.length-1?'<button type="button" class="btn primary sm" data-action="ht-step" data-id="'+HSTEP[ix+1][0]+'">'+HSTEP[ix+1][1]+' <span class="arr">→</span></button>':'')+'</div>';
+  return h;
+}
+function htLine(){
+  var W=600,H=280,L=46,R=20,T=24,B=40;function X(i){return L+i*(W-L-R)/3;}function Y(v){return T+(50-v)/70*(H-T-B);}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="eNPS de empleados y NPS de huéspedes por trimestre. eNPS: '+HQ.e.map(sgn).join(', ')+'. NPS huésped: '+HQ.n.map(sgn).join(', ')+'">';
+  s+='<rect x="'+((X(1)+X(2))/2)+'" y="'+T+'" width="'+((X(3)-X(1))/2)+'" height="'+(H-T-B)+'" fill="#FCEBD9"/><text x="'+X(2)+'" y="'+(T-8)+'" text-anchor="middle" font-size="11.5" font-weight="700" fill="#B5651D" font-family="system-ui,sans-serif">Temporada alta (jul–sep)</text>';
+  [-20,0,20,40].forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="'+(v===0?'#9A9AA2':'#EEECE6')+'"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+sgn(v)+'</text>';});
+  [['n','#4D7DDD'],['e','#D97055']].forEach(function(k){var a=HQ[k[0]];s+='<polyline points="'+a.map(function(v,i){return X(i)+','+Y(v);}).join(' ')+'" fill="none" stroke="'+k[1]+'" stroke-width="3"/>';
+    a.forEach(function(v,i){s+='<circle cx="'+X(i)+'" cy="'+Y(v)+'" r="5" fill="'+k[1]+'"/><text x="'+X(i)+'" y="'+(Y(v)-10)+'" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+sgn(v)+'</text>';});});
+  ['T1 · ene–mar','T2 · abr–jun','T3 · jul–sep','T4 · oct–dic'].forEach(function(t,i){s+='<text x="'+X(i)+'" y="'+(H-14)+'" text-anchor="middle" font-size="11.5" fill="#1D1D21" font-family="system-ui,sans-serif">'+t+'</text>';});
+  return s+'</svg><div class="legend" style="justify-content:flex-start"><span><i class="lg-dot" style="background:#4D7DDD"></i>NPS de huéspedes</span><span><i class="lg-dot" style="background:#D97055"></i>eNPS de empleados</span></div>';
+}
+function htHeat(kind){
+  var q=['T1','T2','T3','T4'];
+  var h='<div class="tscroll"><table class="t ht-heat"><caption class="xs muted" style="text-align:left;caption-side:top;margin-bottom:6px">'+(kind==='e'?'eNPS de empleados (−100 a +100)':'Valoración de huéspedes (1–10)')+'</caption><thead><tr><th>Departamento</th>'+q.map(function(t){return '<th>'+t+'</th>';}).join('')+'</tr></thead><tbody>';
+  HT.forEach(function(d){var a=d[kind],m=htMean(a),sc=kind==='e'?18:0.4;
+    h+='<tr><th scope="row"><button type="button" class="ht-dep" data-action="ht-dep" data-id="'+esc(d.n)+'" aria-pressed="'+(S.ui.htDep===d.n)+'">'+esc(d.n)+'</button></th>'+a.map(function(v){var z=Math.max(-1,Math.min(1,(v-m)/sc));var bg=z<0?'rgba(217,112,85,'+(Math.abs(z)*.75)+')':'rgba(77,125,221,'+(z*.6)+')';return '<td style="background:'+bg+'">'+(kind==='e'?sgn(v):f2(v))+'</td>';}).join('')+'</tr>';});
+  return h+'</tbody></table></div>';
+}
+function htFicha(name){
+  var d=HT.filter(function(x){return x.n===name;})[0]||HT[5];
+  var W=420,H=230,L=34,R=16,T=20,B=34,mid=120;function X(i){return L+28+i*(W-L-R-56)/3;}
+  function YE(v){return mid+ -v*1.6;} // bars around baseline
+  var vmin=7.2,vmax=8.8;function YV(v){return T+(vmax-v)/(vmax-vmin)*60;}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(d.n)+': eNPS '+d.e.map(sgn).join(', ')+'; valoración de huéspedes '+d.v.map(f2).join(', ')+'">';
+  s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+(mid+42)+'" y2="'+(mid+42)+'" stroke="#9A9AA2"/>';
+  d.e.forEach(function(v,i){var y0=mid+42,hh=v*1.2,y=hh>=0?y0-hh:y0;s+='<rect x="'+(X(i)-18)+'" y="'+y+'" width="36" height="'+Math.max(1.5,Math.abs(hh))+'" fill="'+(v<0?'#D97055':'#9DB7D9')+'"/><text x="'+X(i)+'" y="'+(hh>=0?y-5:y+Math.abs(hh)+13)+'" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+sgn(v)+'</text>';});
+  s+='<polyline points="'+d.v.map(function(v,i){return X(i)+','+YV(v);}).join(' ')+'" fill="none" stroke="#1D1D21" stroke-width="2.4"/>';
+  d.v.forEach(function(v,i){s+='<circle cx="'+X(i)+'" cy="'+YV(v)+'" r="4.5" fill="#1D1D21"/><text x="'+X(i)+'" y="'+(YV(v)-9)+'" text-anchor="middle" font-size="12" fill="#1D1D21" font-family="system-ui,sans-serif">'+f2(v)+'</text>';});
+  ['T1','T2','T3','T4'].forEach(function(t,i){s+='<text x="'+X(i)+'" y="'+(H-8)+'" text-anchor="middle" font-size="12" fill="#6B6B73" font-family="system-ui,sans-serif">'+t+'</text>';});
+  s+='</svg>';
+  var me=htMean(d.e),mv=htMean(d.v);
+  return '<div class="clp"><span class="cta-eb">Ficha · '+esc(d.n)+'</span><div class="ht-kv"><div><b>'+sgn(me)+'</b><span>eNPS 2025</span></div><div><b>'+f2(mv)+'</b><span>valoración huésped</span></div><div><b>'+d.pl+'</b><span>personas en plantilla</span></div><div><b>'+(d.c==='D'?'Directo':'Indirecto')+'</b><span>contacto con el huésped</span></div></div>'+s+
+   '<p class="xs muted">Línea: valoración de huéspedes (1–10). Barras: eNPS del equipo; en naranja si es negativo.'+(d.pl<=10?' Equipo pequeño: una sola respuesta mueve el eNPS más de 10 puntos.':'')+'</p></div>';
+}
+function htScatter(mode){
+  var W=560,H=360,L=56,R=24,T=20,B=48,pts,xr,yr,xl,yl;
+  if(mode==='entre'){pts=HT.map(function(d){return {x:htMean(d.e),y:htMean(d.v),l:d.n,c:d.c};});xr=[-12,36];yr=[7.4,8.75];xl='eNPS medio 2025 del departamento';yl='Valoración media de huéspedes (1–10)';}
+  else{pts=[];HT.forEach(function(d){var me=htMean(d.e),mv=htMean(d.v);d.e.forEach(function(e,i){pts.push({x:e-me,y:d.v[i]-mv,l:d.n+' T'+(i+1),c:d.c,q:i});});});xr=[-32,16];yr=[-0.65,0.45];xl='eNPS: diferencia con la media anual del departamento';yl='Valoración: diferencia con su media';}
+  function X(v){return L+(v-xr[0])/(xr[1]-xr[0])*(W-L-R);}function Y(v){return T+(yr[1]-v)/(yr[1]-yr[0])*(H-T-B);}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Gráfico de dispersión '+(mode==='entre'?'entre departamentos':'dentro de cada departamento')+'">';
+  var xt=mode==='entre'?[-10,0,10,20,30]:[-30,-20,-10,0,10],yt=mode==='entre'?[7.6,7.8,8,8.2,8.4,8.6]:[-0.6,-0.4,-0.2,0,0.2,0.4];
+  xt.forEach(function(v){s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="'+(v===0?'#B9B5AA':'#EEECE6')+'"/><text x="'+X(v)+'" y="'+(H-B+16)+'" text-anchor="middle" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+sgn(v)+'</text>';});
+  yt.forEach(function(v){s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="'+(v===0&&mode!=='entre'?'#B9B5AA':'#EEECE6')+'"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+(mode==='entre'?String(v.toFixed(1)).replace('.',','):(v>0?'+':'')+String(v.toFixed(1)).replace('.',',').replace('-','−'))+'</text>';});
+  // regression line
+  var mx=htMean(pts.map(function(p){return p.x;})),my=htMean(pts.map(function(p){return p.y;})),sxy=0,sxx=0;pts.forEach(function(p){sxy+=(p.x-mx)*(p.y-my);sxx+=(p.x-mx)*(p.x-mx);});var b=sxy/sxx,a=my-b*mx;
+  s+='<line x1="'+X(xr[0])+'" y1="'+Y(a+b*xr[0])+'" x2="'+X(xr[1])+'" y2="'+Y(a+b*xr[1])+'" stroke="#1D1D21" stroke-dasharray="5 4" stroke-width="1.4"/>';
+  var LO={'Spa':[8,14],'Recepción':[-8,-10,'end'],'Pisos':[0,-12,'middle'],'Animación':[0,-12,'middle'],'Restaurante (sala)':[0,-12,'middle'],'Bar y piscina':[0,18,'middle'],'Mantenimiento':[0,18,'middle'],'Cocina':[8,4]};
+  pts.forEach(function(p){var col=p.c==='D'?'#4D7DDD':'#D97055';s+='<circle cx="'+X(p.x)+'" cy="'+Y(p.y)+'" r="'+(mode==='entre'?7:5.5)+'" fill="'+col+'" fill-opacity="'+(mode==='entre'?1:(p.q===2?1:.55))+'" stroke="'+(p.q===2?'#1D1D21':'#fff')+'" stroke-width="1.5"><title>'+esc(p.l)+': eNPS '+sgn(p.x)+', valoración '+(mode==='entre'?f2(p.y):(p.y>=0?'+':'')+f2(p.y))+'</title></circle>';
+    if(mode==='entre'){var o=LO[p.l]||[8,4];s+='<text x="'+(X(p.x)+o[0])+'" y="'+(Y(p.y)+o[1])+'" text-anchor="'+(o[2]||'start')+'" font-size="12" font-weight="600" fill="#1D1D21" font-family="system-ui,sans-serif">'+esc(p.l)+'</text>';}});
+  s+='<text x="'+((L+W-R)/2)+'" y="'+(H-6)+'" text-anchor="middle" font-size="11.5" fill="#1D1D21" font-family="system-ui,sans-serif">'+xl+' →</text><text transform="translate(14 '+((T+H-B)/2)+') rotate(-90)" text-anchor="middle" font-size="11.5" fill="#1D1D21" font-family="system-ui,sans-serif">'+yl+' →</text>';
+  return s+'</svg><div class="legend" style="justify-content:flex-start"><span><i class="lg-dot" style="background:#4D7DDD"></i>Contacto directo con el huésped</span><span><i class="lg-dot" style="background:#D97055"></i>Contacto indirecto</span>'+(mode==='entre'?'':'<span><i class="lg-dot" style="background:#fff;border:2px solid #1D1D21"></i>Borde negro: jul–sep</span>')+'</div>';
+}
+function htDiv(){
+  var rows=HT.slice().sort(function(a,b){return htMean(b.e)-htMean(a.e);}),W=560,RH=30,L=150,R=44,T=8,H=rows.length*RH+T+24;function X(v){return L+(v+10)/45*(W-L-R);}
+  var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="eNPS medio por departamento: '+rows.map(function(d){return d.n+' '+sgn(htMean(d.e));}).join(', ')+'">';
+  [-10,0,10,20,30].forEach(function(v){s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="'+T+'" y2="'+(H-20)+'" stroke="'+(v===0?'#1D1D21':'#EEECE6')+'"/><text x="'+X(v)+'" y="'+(H-5)+'" text-anchor="middle" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+sgn(v)+'</text>';});
+  rows.forEach(function(d,i){var m=htMean(d.e),y=T+i*RH,x0=X(0),x1=X(m);s+='<text x="'+(L-10)+'" y="'+(y+RH/2+4)+'" text-anchor="end" font-size="12.5" font-weight="600" fill="#1D1D21" font-family="system-ui,sans-serif">'+esc(d.n)+'</text><rect x="'+Math.min(x0,x1)+'" y="'+(y+6)+'" width="'+Math.max(1.5,Math.abs(x1-x0))+'" height="'+(RH-12)+'" rx="3" fill="'+(m<0?'#D97055':m>=19?'#56A58F':'#9DB7D9')+'"/><text x="'+(m<0?x0+6:x1+6)+'" y="'+(y+RH/2+4)+'" font-size="12" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+sgn(m)+'</text>';});
+  return s+'</svg>';
+}
+function htPanel(st){
+  var u=S.ui;
+  if(st==='pregunta'){
+    return '<h2 class="title-m">¿Los equipos más comprometidos tienen huéspedes más satisfechos?</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Un hotel de 4* en Roquetas de Mar, con 180 empleados, quería saber si el compromiso de cada departamento se notaba en la experiencia de sus huéspedes, y qué pasaba en verano.</p>'+
+     '<div class="prj-src">'+[['user','coral','eNPS de empleados','Encuesta trimestral: «¿Recomendarías este hotel como lugar para trabajar?», de 0 a 10. 594 respuestas, 83 % de participación.'],['star','blue','Valoración de huéspedes','Encuesta post-estancia: cada huésped valora de 1 a 10 los servicios de 8 departamentos. 2.420 encuestas.'],['db','green','Contexto','Plantilla por departamento, tipo de contrato y si el equipo atiende al huésped cara a cara (directo) o no (indirecto).']].map(function(x){return '<div class="psrc" style="border-top-color:var(--'+(x[1]==='blue'?'blue-bg':x[1])+')">'+iico(x[0]==='star'?'chart':x[0],'var(--'+x[1]+'-t)')+'<b>'+x[2]+'</b><span>'+x[3]+'</span></div>';}).join('')+'</div>'+
+     '<div class="rep-box"><div class="rep-h">'+iico('chart','var(--coral)')+'<div><span class="cta-eb">El indicador, explicado</span><h3 class="title-s" style="margin-top:4px">Cómo se calcula el eNPS</h3></div></div>'+
+     '<p style="margin:10px 0 12px">Cada persona responde de 0 a 10. Se cuentan tres grupos y se restan los extremos:</p>'+
+     '<div class="ht-nps"><div style="background:#F9E1DC"><b>0–6</b><span>Detractores</span></div><div style="background:#F1EFEA"><b>7–8</b><span>Pasivos (no cuentan)</span></div><div style="background:#E3F2EC"><b>9–10</b><span>Promotores</span></div></div>'+
+     '<div class="rep-calc"><div><b>26 %</b><span>promotores en verano (T3)</span></div><div class="rep-op">−</div><div><b>34 %</b><span>detractores en verano</span></div><div class="rep-op">=</div><div class="rep-res" style="background:#F9E1DC"><b style="color:#B23A24">−8</b><span>eNPS del trimestre: negativo, más detractores que promotores</span></div></div>'+
+     '<p class="small muted" style="margin-top:6px">Va de −100 (todos detractores) a +100 (todos promotores). Un valor positivo significa más promotores que detractores. Los huéspedes responden una pregunta equivalente sobre el hotel: es el NPS del huésped.</p>'+
+     '<h4 class="rep-sub" style="margin-top:14px">Promotores y detractores por trimestre</h4><div class="ht-stack">'+['T1','T2','T3','T4'].map(function(t,i){var p=HQ.pro[i],d=HQ.det[i];return '<div class="ht-row"><span class="small"><b>'+t+'</b></span><div class="stackbar"><i style="width:'+d+'%;background:#D97055"></i><i style="width:'+(100-p-d)+'%;background:#DDD9CF"></i><i style="width:'+p+'%;background:#56A58F"></i></div><span class="small"><b style="color:'+(HQ.e[i]<0?'#B23A24':'#2F7A62')+'">'+sgn(HQ.e[i])+'</b></span></div>';}).join('')+'</div>'+
+     '<div class="legend" style="justify-content:flex-start"><span><i class="lg-dot" style="background:#D97055"></i>Detractores</span><span><i class="lg-dot" style="background:#DDD9CF"></i>Pasivos</span><span><i class="lg-dot" style="background:#56A58F"></i>Promotores</span></div></div>';
+  }
+  if(st==='anio'){
+    return '<div class="prj-hero" style="background:var(--coral-t)"><div><span class="cta-eb">Resumen del año</span><h2 class="title-m" style="margin-top:6px">Compromiso y experiencia del huésped caen a la vez en verano</h2></div><div class="prj-big"><div><b>+6</b><span>eNPS del hotel en 2025</span></div><div><b>−8</b><span>eNPS en jul–sep, único trimestre negativo</span></div></div></div>'+
+     '<div class="ht-kpis">'+[['+6','eNPS hotel','594 respuestas · 83 %'],['38','NPS huéspedes','2.420 encuestas'],['7,98','valoración estancia','sobre 10'],['−8','eNPS en verano','jul–sep'],['0,89','relación equipo–huésped','dentro de cada departamento']].map(function(k){return '<div><b>'+k[0]+'</b><span>'+k[1]+'</span><span class="xs muted">'+k[2]+'</span></div>';}).join('')+'</div>'+
+     '<div class="grid g2" style="align-items:start"><div class="prj-chart"><h3 class="title-s">eNPS y NPS de huéspedes por trimestre</h3><p class="xs muted" style="margin:4px 0 8px">Las dos líneas bajan juntas en temporada alta y se recuperan en otoño.</p>'+htLine()+'</div>'+
+     '<div class="prj-chart"><h3 class="title-s">eNPS medio por departamento</h3><p class="xs muted" style="margin:4px 0 8px">Más de 0 = más promotores que detractores.</p>'+htDiv()+'</div></div>';
+  }
+  if(st==='mapa'){
+    var sel=u.htDep||'Pisos';
+    return '<h2 class="title-m">Dónde y cuándo coinciden los problemas</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Cada celda se colorea frente a la media anual de su departamento: <span style="background:rgba(217,112,85,.6);padding:0 4px">naranja</span> = peor de lo habitual, <span style="background:rgba(77,125,221,.45);padding:0 4px">azul</span> = mejor.</p>'+
+     '<div class="grid g2" style="align-items:start;margin-top:12px"><div>'+htHeat('e')+'</div><div>'+htHeat('v')+'</div></div>'+
+     '<p class="note small" style="margin-top:12px">En jul–sep los naranjas coinciden en Pisos, Restaurante, Mantenimiento y Cocina en las dos tablas. Animación hace lo contrario: mejora en verano en las dos medidas. Pulsa un departamento para ver su ficha.</p>'+
+     '<div class="grid g2" style="align-items:start;margin-top:12px"><div>'+htFicha(sel)+'</div><div class="prj-chart"><h3 class="title-s">Cómo leer la ficha</h3><ul class="prj-ul" style="margin-top:8px"><li><b>Las barras</b> son el eNPS del equipo en cada trimestre.</li><li><b>La línea</b> es la valoración de sus huéspedes.</li><li>Si las dos bajan a la vez en el mismo trimestre, el problema del equipo y el del huésped coinciden en el tiempo.</li><li>Cada responsable recibe la ficha de su departamento: su equipo y sus huéspedes, trimestre a trimestre.</li></ul></div></div>';
+  }
+  if(st==='rel'){
+    var m=u.htSc||'entre';
+    return '<h2 class="title-m">¿Están relacionados?</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Sí, y de dos formas distintas: entre departamentos y, sobre todo, dentro de cada departamento a lo largo del año.</p>'+
+     '<div class="seg" role="group" aria-label="Tipo de comparación" style="margin-top:14px">'+[['entre','Entre departamentos'],['dentro','Dentro de cada departamento']].map(function(x){return '<button type="button" data-action="ht-sc" data-id="'+x[0]+'" aria-pressed="'+(m===x[0])+'">'+x[1]+'</button>';}).join('')+'</div>'+
+     '<div class="grid g2" style="align-items:start;margin-top:12px"><div class="prj-chart">'+(m==='entre'?'<h3 class="title-s">Departamentos con mejor eNPS, huéspedes más satisfechos</h3><p class="xs muted" style="margin:4px 0 8px">Cada punto es un departamento con sus medias de 2025.</p>':'<h3 class="title-s">Cuando el eNPS de un equipo cae, sus valoraciones también</h3><p class="xs muted" style="margin:4px 0 8px">Cada punto es un departamento en un trimestre, comparado con su propia media. Así se quita lo que distingue a un departamento de otro.</p>')+htScatter(m)+'</div>'+
+     '<div><div class="ht-stats">'+[['ρ = 0,79','Entre departamentos','Spearman con las 8 medias anuales. Con solo 8 puntos, el intervalo es amplio (0,18 a 0,96).'],['r = 0,89','Dentro de cada departamento','Correlación de medidas repetidas: cada equipo comparado consigo mismo, trimestre a trimestre.'],['+0,23','Por cada 10 puntos de eNPS','Lo que sube la valoración del huésped (1–10) dentro de un departamento. Se mantiene igual (+0,23) al descontar el efecto del trimestre.'],['r = −0,92','% de detractores','Cuantos más empleados descontentos en un trimestre, peor valoración ese trimestre.']].map(function(x){return '<div><b>'+x[0]+'</b><span class="small"><b>'+x[1]+'</b></span><span class="xs muted">'+x[2]+'</span></div>';}).join('')+'</div>'+
+     '<details class="cl-more" style="margin-top:12px"><summary>Más análisis y cómo se hicieron</summary><ul class="prj-ul" style="margin-top:8px"><li><b>Verano descontado.</b> Modelo con efectos fijos de departamento y trimestre: la relación se mantiene aunque el verano afecte a todos a la vez.</li><li><b>Modelo multinivel</b> con las 2.420 valoraciones individuales: tanto la parte estable del eNPS del departamento como su variación trimestral se asocian con la valoración.</li><li><b>Contacto directo e indirecto.</b> La relación aparece en los dos tipos de equipo (r = 0,86 y 0,97): no solo cuenta quien atiende cara a cara.</li><li><b>Desfase.</b> El eNPS de un trimestre no anticipa la valoración del siguiente: los dos se mueven a la vez.</li><li>Análisis hecho en R (readxl, dplyr, lme4) y verificado de nuevo desde los datos brutos.</li></ul></details>'+
+     '<p class="note small" style="margin-top:12px"><b>Relación, no prueba de causa.</b> Un equipo comprometido atiende mejor, y unos huéspedes contentos hacen el trabajo más llevadero: los dos se refuerzan.</p></div></div>';
+  }
+  if(st==='verano'){
+    var rows=HT.slice().sort(function(a,b){return b.det[1]-a.det[1];});
+    var W=560,RH=34,L=150,R=40,T=30,H=rows.length*RH+T+26;function X(v){return L+v/60*(W-L-R);}
+    var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Porcentaje de detractores por departamento, resto del año frente a julio a septiembre">';
+    [0,20,40,60].forEach(function(v){s+='<line x1="'+X(v)+'" x2="'+X(v)+'" y1="'+(T-6)+'" y2="'+(H-22)+'" stroke="'+(v===40?'#C83E2A':'#EEECE6')+'"'+(v===40?' stroke-dasharray="5 4" stroke-width="1.6"':'')+'/><text x="'+X(v)+'" y="'+(H-6)+'" text-anchor="middle" font-size="11" fill="#6B6B73" font-family="system-ui,sans-serif">'+v+' %</text>';});
+    s+='<text x="'+(X(40)+5)+'" y="'+(T-10)+'" font-size="11.5" font-weight="700" fill="#C83E2A" font-family="system-ui,sans-serif">Alarma: 40 %</text>';
+    rows.forEach(function(d,i){var y=T+i*RH+RH/2,a=d.det[0],b=d.det[1],al=b>=40;s+='<text x="'+(L-10)+'" y="'+(y+4)+'" text-anchor="end" font-size="12.5" font-weight="'+(al?800:600)+'" fill="#1D1D21" font-family="system-ui,sans-serif">'+esc(d.n)+'</text><line x1="'+X(a)+'" x2="'+X(b)+'" y1="'+y+'" y2="'+y+'" stroke="#B9B5AA" stroke-width="3"/><circle cx="'+X(a)+'" cy="'+y+'" r="6" fill="#9DB7D9"/><circle cx="'+X(b)+'" cy="'+y+'" r="7" fill="'+(al?'#C83E2A':'#E2862A')+'"/><text x="'+(X(Math.max(a,b))+12)+'" y="'+(y+4)+'" font-size="12" font-weight="700" fill="#1D1D21" font-family="system-ui,sans-serif">'+b+' %</text>';});
+    s+='</svg>';
+    return '<h2 class="title-m">Cuatro equipos donde compromiso y experiencia caen juntos</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Pisos, Restaurante, Mantenimiento y Cocina llegan al 40–44 % de empleados descontentos en verano.</p>'+
+     '<div class="grid g2" style="align-items:start;margin-top:12px"><div class="prj-chart"><h3 class="title-s">Empleados descontentos en verano</h3><p class="xs muted" style="margin:4px 0 8px">% de detractores (0–6): resto del año frente a jul–sep.</p>'+s+'<div class="legend" style="justify-content:flex-start"><span><i class="lg-dot" style="background:#9DB7D9"></i>Resto del año</span><span><i class="lg-dot" style="background:#E2862A"></i>Jul–sep</span><span><i class="lg-dot" style="background:#C83E2A"></i>Jul–sep, en la alarma</span></div></div>'+
+     '<div><div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Atención en verano</span><p class="small">En Pisos el eNPS pasa de +12 a −29 y la valoración de sus huéspedes de 8,55 a 7,62. Restaurante, Mantenimiento y Cocina siguen el mismo patrón.</p></div>'+
+     '<div class="watch" style="border-color:var(--green);margin-top:10px"><span class="cta-eb">Los que aguantan</span><p class="small">Spa, Recepción y Animación mantienen el compromiso en temporada alta. Animación incluso mejora: baja del 20 % al 14 % de descontentos.</p></div>'+
+     '<p class="xs muted" style="margin-top:10px">El umbral del 40 % es una alarma práctica propuesta para actuar, no un corte validado.</p></div></div>';
+  }
+  return '<h2 class="title-m">Qué proponemos para 2026</h2><ol class="flowp" style="margin-top:14px">'+[['Preparar el verano','En Pisos, Restaurante, Mantenimiento y Cocina: revisar antes de junio refuerzos, cuadrantes y reparto de cargas.'],['Medir cada mes en verano','eNPS mensual de junio a septiembre y trimestral el resto del año, para ver la caída antes de que llegue a las reseñas.'],['El % de descontentos como alarma','Si supera el 40 % en un equipo, actuar ese mismo mes con su responsable.'],['Añadir 4 o 5 preguntas','Carga de trabajo, responsable, reconocimiento y condiciones: el eNPS dice dónde; estas preguntas dirán por qué.'],['Aprender de quien aguanta','Spa, Animación y Recepción mantienen el compromiso en temporada alta: compartir qué hacen distinto.']].map(function(x,i){return '<li><span class="fp-n">'+(i+1)+'</span><b>'+x[0]+'</b><span class="small">'+x[1]+'</span></li>';}).join('')+'</ol>'+
+   '<h3 class="title-s" style="margin:22px 0 10px">Cómo leer estos resultados</h3><div class="grid g2" style="align-items:start"><div class="watch" style="border-color:var(--ink)"><ul class="prj-ul"><li>Es una relación, no una causa demostrada.</li><li>El eNPS no anticipa el trimestre siguiente: los dos se mueven a la vez. Por eso conviene medir más a menudo en verano.</li></ul></div><div class="watch" style="border-color:var(--ink)"><ul class="prj-ul"><li>Equipos pequeños, más variación: en Spa (8 personas) o Animación (10), una respuesta mueve el eNPS más de 10 puntos.</li><li>Un solo año de datos: hay que confirmar el patrón en 2026. No se muestran grupos de menos de 5 respuestas.</li></ul></div></div>';
+}
+
+function prjPanel(st){
+  var u=S.ui,e=PRJ.emp,T=PRJ.teams;
+  if(st==='pregunta'){
+    return '<h2 class="title-m">¿Influye el responsable en cómo trabaja su equipo?</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">La dirección quería saber si el estilo de los responsables tenía que ver con la calidad del trabajo y, si era así, qué hacer.</p>'+
+     '<div class="prj-src">'+[['user','yellow','Liderazgo','Encuesta confidencial: cada trabajador valora a su responsable en 5 conductas concretas (claridad, feedback, apoyo, escucha y organización), de 1 «nunca» a 5 «siempre».'],['chart','blue','Desempeño','Ficha del responsable sobre cada persona: calidad, cumplimiento, autonomía y colaboración, de 1 a 5, con ejemplos observables.'],['db','green','Dato objetivo','% de trabajo que hubo que repetir o corregir en cada equipo, del registro de la empresa. No depende de la opinión de nadie.']].map(function(x){return '<div class="psrc" style="border-top-color:var(--'+(x[1]==='blue'?'blue-bg':x[1])+')">'+iico(x[0],'var(--'+x[1]+'-t)')+'<b>'+x[2]+'</b><span>'+x[3]+'</span></div>';}).join('')+'</div>'+
+     '<div class="rep-box"><div class="rep-h">'+iico('db','var(--green)')+'<div><span class="cta-eb">El dato objetivo, explicado</span><h3 class="title-s" style="margin-top:4px">Cómo se midió el reproceso</h3></div></div>'+
+     '<p style="margin:10px 0 12px">Salió del registro operativo que ya tenía la empresa, no de una encuesta. Para cada equipo y en las mismas cuatro semanas se contaron dos cosas: cuánto trabajo hizo y cuánto de ese trabajo hubo que repetir o corregir porque no salió bien a la primera.</p>'+
+     '<div class="rep-calc"><div><b>13.100</b><span>unidades de trabajo hizo Recolección Norte (EQ01)</span></div><div class="rep-op">÷</div><div><b>722</b><span>tuvieron que repetirse o corregirse</span></div><div class="rep-op">=</div><div class="rep-res"><b>5,5 %</b><span>de reproceso</span></div></div>'+
+     '<p class="small muted" style="margin:6px 0 14px">Fórmula: unidades repetidas o corregidas ÷ unidades hechas. En la empresa: 10.015 de 138.924 antes (7,2 %) y 8.999 de 138.884 después (6,5 %), con prácticamente el mismo volumen de trabajo.</p>'+
+     '<h4 class="rep-sub">Qué es una «unidad» en cada tipo de equipo</h4><div class="tscroll"><table class="t"><thead><tr><th>Tipo de equipo</th><th>Una unidad es…</th><th>Hay reproceso cuando…</th></tr></thead><tbody>'+
+     [['Recolección','Una caja o bandeja recogida','Hay que volver a seleccionar o reenvasar producto mal recogido'],['Envasado','Una caja o lote envasado','Hay que reenvasar, por ejemplo, por falta de etiqueta de lote o peso incorrecto'],['Calibrado','Un lote calibrado','Hay que volver a pasar producto mal clasificado'],['Logística y almacén','Un pedido o palé preparado','Hay que rehacer un pedido incompleto o mal etiquetado'],['Mantenimiento y riego','Una orden de trabajo','Hay que volver a una avería o tarea mal resuelta']].map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>';}).join('')+'</tbody></table></div>'+
+     '<p class="note small" style="margin-top:12px"><b>Por qué cada equipo se compara consigo mismo.</b> Una caja de envasado no es lo mismo que una orden de mantenimiento, así que el porcentaje de un equipo no se compara tal cual con el de otro. Por eso el diagnóstico usa la correlación de Spearman, que trabaja con el orden de los equipos y no con sus valores exactos, y la evaluación compara cada equipo antes y después. Es un dato de equipo: no existe registro individual.</p></div>'+
+     '<h3 class="title-s" style="margin:22px 0 10px">Decisiones de diseño</h3><ul class="prj-ul"><li><b>Unidad de análisis: el equipo.</b> La encuesta no se vincula con el trabajador; el cruce se hace por equipo.</li><li><b>Mismo periodo para las tres fuentes</b> (cuatro semanas, 28/09–25/10/2025).</li><li><b>Sesión previa de calibración</b> entre responsables para que un «4» signifique lo mismo en todos los equipos.</li><li><b>Diccionario de datos</b> y códigos seudonimizados desde el origen.</li><li><b>Remedición prevista desde el principio:</b> mismos instrumentos a las 8 semanas.</li></ul>';
+  }
+  if(st==='diag'){
+    var y=u.prjY||'rep',hf=PRJ.halves;
+    var h='<div class="prj-hero"><div><span class="cta-eb">Hallazgo principal</span><h2 class="title-m" style="margin-top:6px">Los equipos con el liderazgo peor valorado repetían 1,7 veces más trabajo</h2></div><div class="prj-big"><div><b>'+f1(100*hf.bot_rep)+' %</b><span>reproceso en los 5 equipos con liderazgo peor valorado</span></div><div><b>'+f1(100*hf.top_rep)+' %</b><span>en los 5 mejor valorados</span></div></div></div>';
+    h+='<div class="prj-chart"><div class="prj-ch-h"><h3 class="title-s">Cada punto es un equipo</h3><div class="seg" role="group" aria-label="Eje vertical"><button type="button" data-action="prj-y" data-id="rep" aria-pressed="'+(y==='rep')+'">Reproceso</button><button type="button" data-action="prj-y" data-id="des" aria-pressed="'+(y==='des')+'">Desempeño evaluado</button></div></div>'+prjScatter(y)+
+      '<div class="legend" style="justify-content:flex-start">'+Object.keys(NIVCOL).map(function(k){return '<span><i class="lg-dot" style="background:'+NIVCOL[k]+'"></i>'+k+' (plan posterior)</span>';}).join('')+'<span>Tamaño = personas del equipo</span></div>'+
+      '<p class="small" style="margin-top:8px">'+(y==='rep'?'Eje vertical: % del trabajo de cada equipo que hubo que repetir o corregir (ver «Cómo se midió el reproceso» en el paso 1). Spearman ρ = '+f2(PRJ.sp.lid_rep.rho).replace('-','−')+' (n = 10 equipos; IC 95 % bootstrap '+f2(PRJ.sp.lid_rep.lo).replace('-','−')+' a '+f2(PRJ.sp.lid_rep.hi).replace('-','−')+'). Tendencia clara, pero con 10 equipos el intervalo es amplio.':'Spearman ρ = '+f2(PRJ.sp.lid_des.rho)+' (IC 95 % '+f2(PRJ.sp.lid_des.lo)+' a '+f2(PRJ.sp.lid_des.hi)+'). Va en la misma dirección. EQ04 y EQ02 reciben notas correctas pese a tener el reproceso más alto: por eso conviene mirar siempre el dato objetivo junto a la ficha.')+'</p></div>';
+    h+='<div class="grid g2" style="margin-top:22px;align-items:start"><div class="prj-chart"><h3 class="title-s">Dos conductas concentran el problema</h3><p class="xs muted" style="margin:4px 0 8px">% de trabajadores que responden «nunca» o «pocas veces» sobre su responsable.</p>'+
+      '<div class="bars">'+PRJ.C.map(function(c,i){var v=PRJ.cg.T0[i][1];return '<div class="barrow"><span>'+c+'</span><span class="track"><span class="fill" style="width:'+(v/40*100)+'%;background:'+(v>=25?'#D97055':'#B5B2AA')+'"></span></span><span class="val">'+v+' %</span></div>';}).join('')+'</div>'+
+      '<p class="small" style="margin-top:10px">Organización era además la conducta más ligada al reproceso (ρ = '+f2(PRJ.cond_rep['Organización'].rho).replace('-','−')+'); feedback, la más fácil de entrenar y observar.</p></div>'+
+      '<div class="prj-chart"><h3 class="title-s">Lo que estaba en juego</h3><p class="prj-num">≈ 2.400</p><p class="small" style="margin:0">unidades menos de reproceso cada 4 semanas si los equipos con peor liderazgo trabajaran como los demás: el <b>24 %</b> de todo el reproceso de la empresa (10.015 unidades en el periodo).</p><p class="xs muted" style="margin-top:10px">Estimación de la presentación a dirección. Cada unidad repetida supone horas de trabajo, material y retrasos.</p></div></div>';
+    var hm=u.prjHeat||'T0';
+    h+='<div class="prj-chart" style="margin-top:22px"><div class="prj-ch-h"><h3 class="title-s">Mapa por equipo: % de respuestas desfavorables</h3><div class="seg" role="group" aria-label="Momento"><button type="button" data-action="prj-heat" data-id="T0" aria-pressed="'+(hm==='T0')+'">Antes</button><button type="button" data-action="prj-heat" data-id="T1" aria-pressed="'+(hm==='T1')+'">Después</button></div></div>'+
+      '<div class="tscroll"><table class="heat"><thead><tr><th>Equipo</th>'+PRJ.C.map(function(c){return '<th>'+c+'</th>';}).join('')+'<th>Plan</th></tr></thead><tbody>'+T.slice().sort(function(a,b){return a.lid[0]-b.lid[0];}).map(function(t){var d=hm==='T0'?t.d0:t.d1;return '<tr><th scope="row">'+t.eq+' · '+t.dep+'</th>'+d.map(heatCell).join('')+'<td><span class="lg-dot" style="background:'+NIVCOL[t.nivel]+'"></span> '+t.nivel+'</td></tr>';}).join('')+'</tbody></table></div>'+
+      '<p class="xs muted" style="margin-top:8px">Más oscuro = más personas del equipo valoran mal esa conducta. Ordenado de peor a mejor liderazgo en la medición inicial. Cada responsable recibió solo el informe de su equipo.</p></div>';
+    return h;
+  }
+  if(st==='plan'){
+    return '<h2 class="title-m">Un programa de 8 semanas sobre dos hábitos observables</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">No se trataba de cambiar la forma de ser de nadie, sino de dos conductas que el equipo nota si se hacen o no.</p>'+
+     '<div class="grid g2" style="margin-top:18px"><div class="phab" style="border-top-color:var(--coral)"><span class="cta-eb">Hábito 1</span><h3 class="title-s">Organizar la carga de trabajo</h3><ul class="prj-ul"><li>Planificación de 15 minutos a la semana con el equipo delante.</li><li>Preguntar antes de asignar: «¿Cómo vas con lo que tienes?».</li><li>En los picos de campaña, decir qué se aparca.</li><li>Rotar las tareas pesadas.</li></ul><p class="small muted" style="margin:6px 0 0"><b>Señal de alerta:</b> las mismas personas siempre al límite mientras otras esperan.</p></div>'+
+     '<div class="phab" style="border-top-color:var(--blue-bg)"><span class="cta-eb">Hábito 2</span><h3 class="title-s">Dar feedback concreto</h3><ul class="prj-ul"><li>Una conversación breve a la semana con cada persona, aunque sea de pie en la nave.</li><li>Hablar de hechos, no de actitudes.</li><li>Decir qué se espera la próxima vez y cómo.</li><li>Reconocer lo que sale bien, también en público.</li></ul><p class="small muted" style="margin:6px 0 0"><b>Señal de alerta:</b> el trabajador solo se entera de que algo fue mal cuando hay que repetirlo.</p></div></div>'+
+     '<h3 class="title-s" style="margin:24px 0 12px">Intensidad según lo que señalaba cada equipo</h3><div class="niv">'+[['Intensiva','4 equipos','EQ02, EQ04, EQ08, EQ10 · partían peor · seguimiento quincenal'],['Moderada','3 equipos','EQ03, EQ05, EQ09 · foco en feedback'],['Seguimiento','1 equipo','EQ06 · organización'],['Referente','2 equipos','EQ01, EQ07 · los mejor valorados comparten cómo lo hacen']].map(function(n){return '<div class="nv" style="border-left-color:'+NIVCOL[n[0]]+'"><b>'+n[0]+'</b><span class="pk-s">'+n[1]+'</span><span class="small">'+n[2]+'</span></div>';}).join('')+'</div>'+
+     '<h3 class="title-s" style="margin:24px 0 12px">Calendario</h3><ol class="ptl">'+[['0','Devolución','Cada responsable recibe solo el informe de su equipo.'],['1–2','Formación','2 sesiones prácticas de 2 horas con casos reales.'],['3–6','Práctica','Aplicación en el puesto; seguimiento quincenal a los 4 prioritarios.'],['8','Remedición','Misma encuesta, misma ficha, mismo dato de reproceso.'],['9','Resultados','Comparación antes y después, equipo por equipo.']].map(function(x){return '<li><span class="ptl-w">Semana '+x[0]+'</span><b>'+x[1]+'</b><span class="small">'+x[2]+'</span></li>';}).join('')+'</ol>'+
+     '<p class="note small" style="margin-top:16px"><b>Cuidado del encuadre:</b> el programa se presentó como una inversión en quienes dirigen equipos, no como una evaluación. Los resultados no se usaron para evaluar a nadie ni se compararon responsables entre sí: cada equipo se comparó consigo mismo.</p>';
+  }
+  if(st==='res'){
+    var h='<h2 class="title-m">Se cumplen los cuatro objetivos</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">Las dos conductas trabajadas son las que más cambian, y el reproceso baja en 9 de 10 equipos (≈ 1.000 unidades menos en 4 semanas, con el mismo volumen).</p>';
+    h+='<div class="grid g2" style="margin-top:18px;align-items:start"><div class="prj-chart"><h3 class="title-s">Respuestas desfavorables por conducta</h3><p class="xs muted" style="margin:4px 0 8px">● gris: antes · ● color: después.</p>'+prjDumbbell(PRJ.C.map(function(c,i){return {lab:c,sub:i<2?'Trabajada':'',a:PRJ.cg.T0[i][1],b:PRJ.cg.T1[i][1]};}),{max:35,ticks:[0,10,20,30],suf:' %',lowerBetter:true,L:120,label:'Porcentaje de respuestas desfavorables antes y después por conducta',fmt:function(v){return v+' %';}})+'</div>'+
+      '<div class="prj-chart"><h3 class="title-s">Reproceso por equipo</h3><p class="xs muted" style="margin:4px 0 8px">● gris: antes · ● color: después, según el nivel de intervención.</p>'+prjDumbbell(T.slice().sort(function(a,b){return b.rep[0]-a.rep[0];}).map(function(t){return {lab:t.eq,sub:t.dep,a:t.rep[0],b:t.rep[1],c:NIVCOL[t.nivel]};}),{max:11,ticks:[0,4,8],suf:' %',lowerBetter:true,L:120,label:'Porcentaje de reproceso por equipo antes y después',fmt:function(v){return f1(v)+' %';}})+'</div></div>';
+    var g=PRJ.gm;
+    h+='<h3 class="title-s" style="margin:24px 0 12px">Cuanto más acompañamiento, más mejora</h3><div class="niv">'+[['Intensiva','4 equipos · partían peor',g.Intensiva],['Moderada','3 equipos · foco en feedback',g.Moderada],['Seguimiento y referentes','3 equipos · ya funcionaban bien',g.Seg]].map(function(n){var c=NIVCOL[n[0]]||'#56A58F';return '<div class="nv" style="border-left-color:'+c+'"><b>'+n[0]+'</b><span class="pk-s">'+n[1]+'</span><span class="small">Organización <b>'+sg(n[2].org)+'</b> · Feedback <b>'+sg(n[2].fb)+'</b></span><span class="small">Desempeño <b>'+sg(n[2].des)+'</b> · Reproceso '+f1(100*n[2].rep0)+' → <b>'+f1(100*n[2].rep1)+' %</b></span></div>';}).join('')+'</div><p class="xs muted">Cambio medio en escala 1–5; reproceso del conjunto de los equipos del grupo.</p>';
+    var nf=u.prjNivel||'all';
+    h+='<div class="prj-chart" style="margin-top:22px"><div class="prj-ch-h"><h3 class="title-s">Resultado equipo a equipo</h3><div class="seg" role="group" aria-label="Filtrar por intervención">'+[['all','Todos'],['Intensiva','Intensiva'],['Moderada','Moderada'],['otros','Seguimiento y referentes']].map(function(o){return '<button type="button" data-action="prj-niv" data-id="'+o[0]+'" aria-pressed="'+(nf===o[0])+'">'+o[1]+'</button>';}).join('')+'</div></div>'+
+      '<div class="tscroll"><table class="t"><thead><tr><th>Equipo</th><th>Intervención</th><th>Conducta trabajada</th><th>Liderazgo (1–5)</th><th>Cambio en el foco</th><th>Reproceso</th></tr></thead><tbody>'+T.filter(function(t){return nf==='all'||(nf==='otros'?(t.nivel==='Seguimiento'||t.nivel==='Referente'):t.nivel===nf);}).map(function(t){var lc={'Mejora clara':'#1F6B53','Mejora leve':'#2F8A6E','Sin cambio':'#5F5D57','Empeora':'#A3301E'}[t.lect];var lect=t.nivel==='Referente'&&t.cf<-0.19?'Ligero descenso':t.lect;if(t.nivel==='Referente')lc=lect==='Ligero descenso'?'#97520F':lc;return '<tr><td><b>'+t.eq+'</b> · '+t.dep+'</td><td><span class="lg-dot" style="background:'+NIVCOL[t.nivel]+'"></span> '+t.nivel+'</td><td>'+t.foco+'</td><td>'+f2(t.lid[0])+' → '+f2(t.lid[1])+'</td><td style="color:'+lc+';font-weight:700">'+lect+' ('+sg(t.cf)+')</td><td>'+f1(t.rep[0])+' → '+f1(t.rep[1])+' %</td></tr>';}).join('')+'</tbody></table></div>'+
+      '<p class="xs muted" style="margin-top:8px">Cambio en la conducta trabajada (1–5): mejora clara ≥ +0,50 · mejora leve +0,20 a +0,49 · sin cambio −0,19 a +0,19 · empeora ≤ −0,20. En los referentes, cambio en el liderazgo total; desde lo más alto, un ligero descenso es habitual.</p></div>';
+    h+='<h3 class="title-s" style="margin:24px 0 12px">Dónde mirar después</h3><div class="grid g3">'+
+      '<div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Atención</span><b>EQ05 · Calibrado</b><p class="small">Feedback desfavorable 40 % → 56 %. El feedback no llegó al equipo: hablar con el responsable para entender qué lo dificultó.</p></div>'+
+      '<div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Atención</span><b>EQ08 · Riego</b><p class="small">Las quejas por la carga bajan del 67 % al 22 %, pero el reproceso apenas cambia (8,7 → 8,5 %): revisar con producción si hay causas técnicas.</p></div>'+
+      '<div class="watch" style="border-color:var(--green)"><span class="cta-eb">Sin preocupación</span><b>EQ01 y EQ07</b><p class="small">Bajan un poco desde lo más alto (≈ 4,2 → 4,0), algo habitual. Siguen siendo la referencia para el resto.</p></div></div>';
+    return h;
+  }
+  if(st==='rigor'){
+    var a=PRJ.alpha,ic=PRJ.icc,w=PRJ.wt;
+    function wrow(k,pct){var x=w[k];var m=pct?function(v){return f1(100*v)+(k==='% reproceso'?' %':' %');}:f2;return '<tr><td>'+k+'</td><td>'+m(x.m0)+' → '+m(x.m1)+'</td><td>'+(pct?sg(100*x.cambio,1)+' pp':sg(x.cambio))+' <span class="muted">['+(pct?sg(100*x.lo,1)+'; '+sg(100*x.hi,1):sg(x.lo)+'; '+sg(x.hi))+']</span></td><td>'+x.mejoran+' de '+x.n+'</td><td>'+fp(x.p)+'</td><td>'+f2(Math.abs(x.r))+'</td></tr>';}
+    return '<h2 class="title-m">¿Podemos fiarnos? Sí, con prudencia</h2>'+
+     '<div class="grid g2" style="margin-top:14px;align-items:start"><div class="watch" style="border-color:var(--green)"><span class="cta-eb">Por qué sí</span><ul class="prj-ul"><li>8 de 10 equipos mejoran en organización y 9 de 10 reducen el reproceso.</li><li>Mejora más quien más acompañamiento recibe; no cambia quien no se intervino.</li><li>Tres fuentes distintas apuntan en la misma dirección.</li><li>Escalas fiables y agregación por equipo justificada.</li></ul></div>'+
+     '<div class="watch" style="border-color:var(--coral)"><span class="cta-eb">Límites que se comunicaron</span><ul class="prj-ul"><li>Sin grupo de control: los referentes también participaron.</li><li>Regresión a la media: los equipos que partían peor tienden a subir.</li><li>Estacionalidad: sep–oct y nov–dic son momentos distintos de campaña.</li><li>Efecto de la propia medición.</li><li>Diez equipos: poca potencia; se lee como tendencia. Por eso se propuso volver a medir en marzo.</li></ul></div></div>'+
+     '<h3 class="title-s" style="margin:24px 0 10px">Calidad de la medida</h3><div class="tscroll"><table class="t"><thead><tr><th>Escala</th><th>α de Cronbach (antes / después)</th><th>ICC(1)</th><th>ICC(2)</th><th>r<sub>wg(j)</sub> mediano</th></tr></thead><tbody>'+
+     '<tr><td>Liderazgo (5 ítems)</td><td>'+f2(a.T0.lid)+' / '+f2(a.T1.lid)+'</td><td>'+f2(ic.T0.lid1)+'</td><td>'+f2(ic.T0.lid2)+'</td><td>'+f2(ic.T0.rl)+'</td></tr>'+
+     '<tr><td>Desempeño (4 ítems)</td><td>'+f2(a.T0.des)+' / '+f2(a.T1.des)+'</td><td>'+f2(ic.T0.des1)+'</td><td>'+f2(ic.T0.des2)+'</td><td>'+f2(ic.T0.rd)+'</td></tr></tbody></table></div>'+
+     '<p class="xs muted" style="margin-top:6px">ICC y r<sub>wg(j)</sub> de la medición inicial. Referencias orientativas: ICC(1) &gt; 0,05–0,10; ICC(2) &gt; 0,60–0,70; r<sub>wg(j)</sub> &gt; 0,70. Justifican hablar de «liderazgo del equipo» y no solo de opiniones individuales.</p>'+
+     '<h3 class="title-s" style="margin:24px 0 10px">Contraste antes–después por equipo (n = 10)</h3><div class="tscroll"><table class="t"><thead><tr><th>Indicador</th><th>Antes → después</th><th>Cambio medio [IC 95 % bootstrap]</th><th>Mejoran</th><th>p (Wilcoxon)</th><th>|r|</th></tr></thead><tbody>'+
+     wrow('Organización (media)')+wrow('Feedback (media)')+wrow('Organización (% desfavorable)',1)+wrow('Feedback (% desfavorable)',1)+wrow('Desempeño (media)')+wrow('% reproceso',1)+'</tbody></table></div>'+
+     '<p class="small" style="margin-top:10px">Además: desempeño pareado por trabajador (n = 100) '+f2(PRJ.wtr.m0)+' → '+f2(PRJ.wtr.m1)+', p = '+fp(PRJ.wtr.p)+'. Equipos con intervención intensiva frente al resto (Mann-Whitney): organización p = '+fp(PRJ.grp['Organización (media)'].p)+'. Relación entre cambio en las conductas trabajadas y cambio en el reproceso: ρ = '+f2(PRJ.spc.rho).replace('-','−')+' (p = '+fp(PRJ.spc.p)+').</p>'+
+     '<p class="note small">Pruebas no paramétricas por el tamaño de muestra. Todo se presenta como exploratorio y con tamaño del efecto, no solo con el valor p. Cifras recalculadas a partir de los datos anonimizados del proyecto; aquí solo se muestran resultados agregados.</p>';
+  }
+  // como
+  return '<h2 class="title-m">Cómo lo trabajé</h2><p class="lead" style="font-size:1.05rem;margin-top:8px">De la pregunta de la dirección a una decisión, con análisis reproducible y devolución adaptada a cada público.</p>'+
+   '<ol class="flowp">'+[['Diseño','Tres fuentes, mismas fechas, sesión de calibración entre responsables y diccionario de datos.'],['Calidad de datos','Rangos, ausentes y coherencia de equipos entre ficheros. Reproceso recalculado desde las unidades.'],['Medida','Fiabilidad (α, correlación ítem-total) y justificación de la agregación por equipo (ICC, r<sub>wg(j)</sub>).'],['Análisis','Spearman con IC bootstrap por equipo, contraste con el dato operativo y conducta prioritaria por responsable.'],['Devolución','Presentación a dirección, guía para responsables e informe individual solo con los datos de cada equipo.'],['Evaluación','Pre–post con Wilcoxon, comparación por nivel de intervención y limitaciones explícitas.']].map(function(x,i){return '<li><span class="fp-n">'+(i+1)+'</span><b>'+x[0]+'</b><span class="small">'+x[1]+'</span></li>';}).join('')+'</ol>'+
+   '<div class="grid g2" style="margin-top:22px;align-items:start"><div><h3 class="title-s" style="margin-bottom:10px">Herramientas</h3><div class="care">'+['R · readxl, dplyr, tidyr','ggplot2 para gráficos de trabajo','Scripts reproducibles con semilla','Exportación a Excel por bloques','Diccionario de datos','Presentaciones y guías de devolución'].map(function(x){return '<span class="care-i" style="background:var(--bg-2);padding:6px 14px">'+x+'</span>';}).join('')+'</div>'+
+   '<h3 class="title-s" style="margin:20px 0 10px">Entregables</h3><ul class="prj-ul"><li>Diagnóstico para dirección (11 diapositivas).</li><li>Guía para responsables del programa (5 páginas).</li><li>Informe individual por responsable.</li><li>Presentación de resultados tras 8 semanas.</li></ul><p class="xs muted">No se adjuntan: contienen información de la empresa.</p></div>'+
+   '<div><h3 class="title-s" style="margin-bottom:10px">Un fragmento del análisis</h3><pre class="code"><code># Acuerdo intra-equipo r_wg(j)\n# (nula uniforme, 5 opciones)\nrwg_j &lt;- function(m, opciones = 5) {\n  s2  &lt;- mean(apply(as.matrix(m), 2, var))\n  sEU &lt;- (opciones^2 - 1) / 12\n  J   &lt;- ncol(m)\n  if (s2 &gt;= sEU) return(0)\n  (J * (1 - s2 / sEU)) /\n    (J * (1 - s2 / sEU) + s2 / sEU)\n}</code></pre><p class="xs muted">Del script de línea base: antes de hablar de «liderazgo del equipo», comprobar que el equipo coincide lo suficiente.</p></div></div>';
+}
+
 /* ---------- Resumen 2 páginas ---------- */
 function miniRhythm(){
   var W=720,X0=150,X1=708,LH=20,TOP=22;function wx(w){return X0+(w-0.5)/52*(X1-X0);}
@@ -1979,14 +2556,15 @@ function vResumen(){
 }
 
 /* ================= Router y render ================= */
-var ROUTES={pulso:vPulso,inicio:vHome,indicadores:vIndicadores,datos:vDatos,lideres:vLideres,riesgos:vRiesgos,clima:vClima,resumen:vResumen};
+var ROUTES={proyectos:vProyectos,pulso:vPulso,inicio:vHome,indicadores:vIndicadores,datos:vDatos,lideres:vLideres,riesgos:vRiesgos,clima:vClima,resumen:vResumen};
 var NAVMAP={pulso:'indicadores',clima:'indicadores',resumen:'inicio'};
-var TITLES={pulso:'Responde como parte del equipo',inicio:'Inicio',indicadores:'Indicadores',datos:'Datos y fases',lideres:'Panel del líder',riesgos:'Riesgos',clima:'Clima anual',resumen:'Resumen del caso'};
+var TITLES={proyectos:'Mis proyectos',pulso:'Responde como parte del equipo',inicio:'Inicio',indicadores:'Indicadores',datos:'Datos y fases',lideres:'Panel del líder',riesgos:'Riesgos',clima:'Clima anual',resumen:'Resumen del caso'};
 function route(){var r=(location.hash||'#inicio').slice(1).split('/')[0];return ROUTES[r]?r:'inicio';}
 var lastRoute=null;
 function render(opts){
   opts=opts||{};var r=route();var main=document.getElementById('main');
   var activeId=document.activeElement&&document.activeElement.id;var sy=window.scrollY;
+  if(r==='proyectos'&&r!==lastRoute)S.ui.prj=null;
   main.innerHTML=ROUTES[r]();
   [].forEach.call(document.querySelectorAll('[data-nav]'),function(a){if(a.getAttribute('data-nav')===(NAVMAP[r]||r))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   document.title=TITLES[r]+' · Clima y florecimiento · Caso práctico';
@@ -2001,6 +2579,7 @@ var toastT=null;
 function toast(m){var t=document.getElementById('toast');t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(function(){t.hidden=true;},3200);}
 function go(r){if(location.hash==='#'+r)render();else location.hash='#'+r;}
 
+document.addEventListener('click',function(ev){var np=ev.target.closest&&ev.target.closest('a[data-nav="proyectos"],a.prj-home');if(np&&route()==='proyectos'&&S.ui.prj){S.ui.prj=null;save();render({top:1});}});
 document.addEventListener('click',function(ev){
   var g=ev.target.closest('[data-go]');if(g){go(g.getAttribute('data-go'));return;}
   var b=ev.target.closest('[data-action]');if(!b)return;
@@ -2032,6 +2611,19 @@ document.addEventListener('click',function(ev){
     case 'phase':u.phase=(u.phase===+id)?null:+id;save();render({focus:'ph-'+id});if(u.phase!=null)reveal('#phasePanel');break;
     case 'copy-msg':{var body=b.closest('.msg').querySelector('.msg-body').innerText;copyText(body);break;}
     case 'print':window.print();break;
+    case 'prj-step':u.prjStep=id;save();render({focus:'ps-'+id});reveal('.prj-steps');break;
+    case 'prj-pick':u.prj=(u.prj===id)?null:id;save();render({focus:'pp-'+id});if(u.prj)reveal('.prj-wrap');break;
+    case 'cl-step':u.clStep=id;save();render({focus:'cs-'+id});reveal('.prj-steps');break;
+    case 'cl-sede':u.clSede=id;save();render();break;
+    case 'cl-dep':u.clDep=id;save();render();break;
+    case 'ht-step':u.htStep=id;save();render({focus:'hs-'+id});reveal('.prj-steps');break;
+    case 'ht-dep':u.htDep=id;save();render();var hf=document.querySelector('#htPanel .clp');if(hf)reveal(hf);break;
+    case 'ht-sc':u.htSc=id;save();render();break;
+    case 'cl-q':u.clQ=id;save();render();break;
+    case 'cl-voz':u.clVoz=id;save();render();break;
+    case 'prj-y':u.prjY=id;save();render();break;
+    case 'prj-heat':u.prjHeat=id;save();render();break;
+    case 'prj-niv':u.prjNivel=id;save();render();break;
     case 'dl-pdf':downloadPdf();break;
   }
 });
@@ -2061,6 +2653,7 @@ function copyText(t){
   if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){toast('Borrador copiado. Recuerda: revisión humana antes de compartir.');},fallback);}else fallback();
 }
 // Tabs de fases con flechas
+document.addEventListener('keydown',function(ev){var t=ev.target;if(!t.classList||!t.classList.contains('clbar'))return;if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();t.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
 document.addEventListener('keydown',function(ev){
   var t=ev.target;if(!t.classList||!t.classList.contains('phcard'))return;
   if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){ev.preventDefault();var cur=+(t.getAttribute('data-id'));var n=(cur+(ev.key==='ArrowRight'?1:2))%3;S.ui.phase=n;save();render({focus:'ph-'+n});}
